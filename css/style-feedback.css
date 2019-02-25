@@ -1,0 +1,75 @@
+
+
+html, body {
+	height: 100%;
+}
+body {
+	background:url("../images/bj.png") center no-repeat;
+	background-size:cover;
+	overflow:hidden;
+
+}
+header{
+	width:800px;
+	height:80px;
+	box-shadow:0 0 5px #fff;
+	margin:140px auto 0;
+	position:relative;
+}
+header .img{
+	height:292px;
+	width:207px;
+	top:-100px;
+	left:-70px;
+	background:url(../images/contact.png) no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+}
+header h3{
+	font:40px/80px "华文隶书";
+	color:#fff;
+	text-shadow:0 0 10px #fff;
+	text-align:center;
+}
+section{
+
+}
+section .content{
+	margin:0 auto;
+	margin-top:50px;
+	box-shadow:0 0 5px #fff;
+	width:560px;
+	height:230px;
+}
+section .content textarea{background:none;border:0;color:#fff;font:15px/20px "";padding:10px;}
+section .content button{border:0;box-shadow: 0 0 5px #fff;margin:30px 0 0 460px ;
+	outline:none;width:100px;height:30px;font:14px/30px "";color:#fff;background:#BF1E40;transition: all 2s;}
+section .content button:hover{background:#fff;color:#BF1E40;}
+footer{
+	position:fixed;
+	right:0;bottom:0;
+		z-index:1;
+	
+}
+footer a{
+	color:#d5d5d5;
+	font:12px/24px "";
+	display:block;
+	float:left;
+	padding:10px;
+
+}
+
+
+footer a:hover{
+	color: #ffffff;
+	text-shadow:0 0 10px #fff;
+}
+
+.xss{
+	position:fixed;
+	font:700 12px/24px "";
+	color:#f99;
+	text-shadow:0 0 5px #fff;
+	bottom:0;left:0;
+}

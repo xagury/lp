@@ -1,0 +1,39 @@
+.top{font:800 14px/30px "";color:#fff;text-shadow: 0 0 5px #BF1E40;padding-bottom: 3px;margin:30px;border-bottom: 1px dashed #fff;}
+.top a{color: #fff;}
+.content{margin:20px auto;width:850px;overflow: hidden;}
+.content p{margin:30px auto;width:500px;}
+
+.content p span{width:100px;display:inline-block;font:16px/32px "";color:#fff;text-shadow: 0 0 5px #000;text-align: center;}
+.content p input{padding:0 10px;height:32px;width:300px;box-shadow:0 0 5px rgba(191,30,64,0.7);border: 0;}
+.content p input[type='radio']{display:inline-block;box-shadow:none; width:30px;padding:10px;}
+.content p input[type="submit"]{ width:300px;margin:20px 0 0 100px;height:32px; background:#ffcccc; color:#fff; font-size:18px; font-weight:700; transition:all 500ms;}
+.content p input[type="submit"]:hover{background:rgb(241,147,156); color:#fff;}
+
+.content .left{width:60%;}
+.content .left p{width:100%;font:16px/32px "";color:#fff;}
+.content .left p b{margin:0 20px;width:55px;text-align:right;}
+.content .left p span{font:16px/32px "";color:#fff;text-shadow:none;width:80%;text-align:left;}
+.content .left p span input{padding:0 10px}
+.content .right{width:40%;}
+.content .right img{width:300px;height:300px;}
+/*所有用户*/
+table{width:100%;margin:0 auto;}
+tr{width:100%;height:40px;}
+tr.top td{margin:0 50px;width:20%;height:40px;font:900 16px/40px "";text-align:center;background: #BF1E40;}
+tr td{white-space:nowrap;text-overflow:ellipsis;overflow:hidden;width:20%;height:40px;text-align: center;color:#fff;font:14px/40px "";}
+
+tr .std{width:200px;overflow: hidden;}
+tr .std i{cursor:pointer;float:left;display:block;width:40px;height:30px;margin-left:64px;background:#BF1E40;padding:0 20px;font:14px/30px "";}
+tr .std b{cursor:pointer;float:left;display:block;width:40px;height:40px;margin:0 10px;background:#BF1E40;}
+tr .std a{font:700 16px/30px "";background:#fff;color:#BF1E40;cursor:pointer;float:left;display:block;width:100%;height:30px;margin:0 10px;}
+tr .std a:hover{background:#BF1E40;color:#fff; }
+tr td:last-child i:hover{background:#fff;color:#BF1E40;}
+table tr td #barcon{color:#fff;border:1px solid #BF1E40;margin-top:20px;position: relative;}
+table tr td #barcon a{display:inline;float:none;color:#Fff;margin:0 10px;}
+table tr td #barcon a:hover{color:#BF1E40;}
+table tr td #barcon span{margin:0 10px;}
+#barcon{color:#fff;border:1px solid #BF1E40;margin-top:20px;position: relative;}
+#barcon a{color:#Fff;margin:0 10px;}
+#barcon a:hover{color:#BF1E40;}
+#barcon span{margin:0 10px;}
+table tr .smali{width:132px;}

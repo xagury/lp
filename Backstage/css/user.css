@@ -1,0 +1,44 @@
+section{width:850px;position: relative;}
+.top{font:800 14px/30px "";color:#fff;text-shadow: 0 0 5px #BF1E40;padding-bottom: 3px;margin:30px;border-bottom: 1px dashed #fff;}
+.top a{color: #fff;}
+.content{margin:20px auto;}
+.con{margin:20px auto;}
+.con tr td:nth-child(6){}
+.content p{margin:30px auto;width:500px;}
+.content p span{width:100px;display:inline-block;font:16px/32px "";color:#fff;text-shadow: 0 0 5px #000;text-align: center;}
+.content p input{padding:0 10px;height:32px;width:300px;box-shadow:0 0 5px rgba(191,30,64,0.7);border: 0;}
+.content p input[type='radio']{display:inline-block;box-shadow:none; width:30px;padding:10px;}
+.content p input[type="submit"]{ width:300px;margin:20px 0 0 100px;height:32px; background:#ffcccc; color:#fff; font-size:18px; font-weight:700; transition:all 500ms;}
+.content p input[type="submit"]:hover{background:rgb(241,147,156); color:#fff;}
+.content p input[type="button"]{width:50px;margin-left:10px;background: #fff;}
+.content p input[type="button"]:hover{background:rgb(241,147,156); color:#fff;}
+.content form .idT{width:700px;margin:30px 75px;}
+.content form .idT #sspan{width:200px;}
+#deA{display:none;}
+#delContent{height:400px;width:300px;margin:0 auto;font:12px/24px "";color:#fff;display:none;text-align:center;}
+/*所有用户*/
+.content table:first-child{min-height:200px;}
+
+
+table{width:100%;}
+tr{width:100%;height:40px;}
+tr.top td{width:120px;height:40px;font:900 16px/40px "";text-align:center;background: #BF1E40;}
+tr td{overflow: hidden;
+text-overflow:ellipsis;width:120px;height:40px;text-align: center;color:#fff;font:14px/40px "";}
+tr td:last-child{width:112px;}
+tr td:last-child i{cursor:pointer;float:left;display:block;width:30px;font:12px/20px "";height:20px;margin:0 10px 0 30px;background:#BF1E40;}
+tr td:last-child b{cursor:pointer;float:left;display:block;width:30px;font:12px/20px "";height:20px;background:#BF1E40;}
+tr td:last-child i:hover{background:#fff;color:#BF1E40;}
+tr td:last-child b:hover{background:#fff;color:#BF1E40;}
+#barcon{color:#fff;border:1px solid #BF1E40;margin-top:20px;position: relative;}
+#barcon a{color:#Fff;margin:0 10px;}
+#barcon a:hover{color:#BF1E40;}
+#barcon span{margin:0 10px;}
+table tr .smali{width:132px;}
+
+
+
+.cBox{overflow:hidden;}
+
+.cBox span{float:left;width:100px;color:#222;font:16px/32px "";margin-top:22px;}
+.cBox p{float:left;color:#222;font:16px/32px "";width:200px;margin-top:22px;}

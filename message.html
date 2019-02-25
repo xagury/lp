@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>留言区</title>
+    <link rel="shortcut icon" href="images/banner.png">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/style-message.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+</head>
+
+<body>
+    <div id="" class="xss">©Xss</div>
+    <div id='loginBar'>
+        <div class="margin clear">
+            <span class="l" style="width:60px">
+                <?php echo $_COOKIE['name'];?></span>
+            <span class='l'>欢迎您登录</span>
+            <div class='nav r'>
+                <nav id="nav">
+
+                    <div class="navC">
+                        <div class="nav index"><a href="index.html">网站首页</a></div>
+
+                        <div class="nav shopIndex"><a href="shop.php">商店首页</a></div>
+                        <div class="nav message"><a href="message.html">交流区</a></div>
+                        <div class="nav help" id="help"><a href="#">服务指南</a>
+                            <div class='lp-nav' id="navHelp">
+                                <div class='lp-nav-content'>
+                                    <ul>
+                                        <li><a href="index1.html">网站前页</a><b>|</b></li>
+                                        <li><a href="href.html">京剧网站</a><b>|</b></li>
+
+                                        <li><a href="cart.html">购物车</a></li>
+                                        <li><a href="about.html">关于我们</a><b>|</b></li>
+                                        <li><a href="contact.html">联系我们</a><b>|</b></li>
+                                        <li><a href="feedback.html">反馈</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="user" class="nav user"><a id='auser' class='user l' href='Backstage/user.html'></a>
+                            <div class='lp-nav'>
+                                <div class='lp-nav-content'>
+                                    <ul>
+                                        <li><a href="Backstage/user.html">我的后台</a><b>|</b></li>
+                                        <li><a href="message.html">我要留言</a><b>|</b></li>
+                                        <li><a href="login.html">登录</a><b>|</b></li>
+                                        <li><a href="register.html">注册</a><b>|</b></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class='margin clear'>
+
+            <a href="#" class="logo l ">
+                <img src="images/banner.png">
+                <span>留言区</span>
+            </a>
+        </div>
+    </header>
+    <main>
+        <section id='container' class='wrap'>
+
+            <div class='grid box' id='1'>
+                <h3>这是第一个测试标题</h3>
+                <img src="images/1 (557).jpg">
+                <p><a href="#">这是第一个测试留言内容</a></p>
+            </div>
+            <div class='grid box' id='2'>
+                <h3>这是第2个测试标题</h3>
+                <img src="images/1 (583).jpg">
+                <p><a href="#">这是第2个测试留言内容</a></p>
+            </div>
+            <div class='grid box' id='3'>
+                <h3>这是第3个测试标题</h3>
+                <img src="images/1 (557).jpg">
+                <p><a href="#">这是第3个测试留言内容</a></p>
+            </div>
+            <div class='grid box' id='4'>
+                <h3>这是第4个测试标题</h3>
+                <img src="images/1 (540).jpg">
+                <p><a href="#">这是第4个测试留言内容</a></p>
+            </div>
+            <div class='grid box' id='5'>
+                    <h3>这是第5个测试标题</h3>
+                    <img src="images/1 (585).jpg">
+                    <p><a href="#">这是第5个测试留言内容</a></p>
+                </div>
+
+
+        </section>
+
+    </main>
+    <div class="mess">
+        <h3 class='fb'>我也要发表</h3>
+        <div class='comment'>
+            <form action="sql/sql-message.php" id="mDetail">
+                <div class='cTitle'>
+                    <span>标题:</span>
+                    <input type='text' class='txtTitle' name="title" value='' required>
+                    <span>昵称:</span>
+                    <input type='text' class='txtName' name='name' value='' required>
+                    <span class='Fimg'>图片:</span>
+                    <input type="file" name="file" id="file" onchange="changepic(this)" required class="inputfile"
+                        accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" />
+                    <img class='bd1' id='show' src='images/1(1).png'>
+
+                </div>
+                <div class='cContent'>
+                    <span>内容:</span>
+                    <div class='content1'>
+                        <textarea form="mDetail" name="content" id="tex" cols="103" rows="8" required style="margin-top: 3px;background:transparent;border-style:none;"></textarea>
+                    </div>
+                    <input type='submit' value='发表' class='btn'>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class='content'>
+
+            <a href="#">用户反馈</a>
+            <a href="about.html">关于我们</a>
+            <a href="map.html">网站导航</a>
+
+        </div>
+
+    </footer>
+
+</body>
+<script src="js/ajaxOOP.js"></script>
+<script type="text/javascript" src='js/myApi.js'></script>
+<script type="text/javascript" src='js/lp.js'></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/gridify.js"></script>
+<script src="js/message.js"></script>
+<script src="js/nav.js"></script>
+<script>
+    xMessage();
+    // $(function () {
+
+    //     var options = {
+    //         srcNode: '.box', // grid items (class, node)
+    //         margin: '20px', // margin in pixel, default: 0px
+    //         width: '230px', // grid item width in pixel, default: 220px
+    //         max_width: '0', // dynamic gird item width if specified, (pixel)
+    //         resizable: true, // re-layout if window resize
+    //         transition: 'all 0.5s ease' // support transition for CSS3, default: all 0.5s ease
+    //     }
+    //     $('.wrap').gridify(options);
+    // })
+</script>
+<script src="js/blocksit.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+
+        //blocksit define
+        $(window).load(function () {
+            $('#container').BlocksIt({
+                numOfCol: 5,
+                offsetX: 8,
+                offsetY: 8,
+                blockElement: '.grid'
+            });
+        });
+
+        //window resize
+        var currentWidth = 1100;
+        $(window).resize(function () {
+            var winWidth = $(window).width();
+            var conWidth;
+            if (winWidth < 660) {
+                conWidth = 440;
+                col = 2
+            } else if (winWidth < 880) {
+                conWidth = 660;
+                col = 3
+            } else if (winWidth < 1100) {
+                conWidth = 880;
+                col = 4;
+            } else {
+                conWidth = 1100;
+                col = 5;
+            }
+
+            if (conWidth != currentWidth) {
+                currentWidth = conWidth;
+                $('#container').width(conWidth);
+                $('#container').BlocksIt({
+                    numOfCol: col,
+                    offsetX: 8,
+                    offsetY: 8
+                });
+            }
+        });
+    });
+</script>
+
+</html>

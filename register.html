@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <!--声明当前页面的编码格式 UTF-8（国际编码）gbk(中文简体)-->
+	<meta charset="utf-8"/>
+	<!--声明当前页面的三要素-->
+	<title>注册</title>
+	<meta name="Keywords" content="关键字">
+	<meta name="Description" content="描述">
+     <link rel="shortcut icon" href="images/banner.png">
+    <link type="text/css" rel="stylesheet" href="css/public.css">
+    <link type="text/css" rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/style-register.css">
+ </head>
+
+ <body>
+		<div id="face">
+			<div id="content">
+				<form name="register" action="sql/sql-user-register.php">
+					<dl>
+						<dt>用户名：</dt>
+						<dd><input type="text" id="name" name='name' required="true" autofocus="true" onkeyup="funname()" placeholder="请输入用户名,以英文或与数字结合"/><span id="sp1" style="color: #fff;"></span></dd>
+					</dl>
+					<dl>
+							
+						<dt>密码：</dt>
+						<dd><input type="password" id="pwd" required="true" name='psd' onkeyup="checkLength()" placeholder="请输入6位输以上密码" max="2"/><span id="spanLen"></span></dd>
+					</dl>
+					<dl>
+							
+						<dt>确认密码：</dt>
+						<dd><input type="password" id="pwd2" required="true" name='sex' onblur="checkPSW()" placeholder="请输入6位输以上密码" max="2"/><span id="pswInfo" style="color:#fff;"></span></dd>
+							
+					</dl>
+					<dl>
+						<dt>性别：</dt>
+						<dd>
+							<input type="radio" name="sex" value='N'/>男 <input type="radio" value='M' name="sex" />女
+						 </dd>
+					</dl>
+					<dl>
+						<dt>手机号：</dt>
+						<dd><input type="number" name='phone' id="phone" placeholder="请输入11位手机号" /></dd>
+					</dl>
+					<dl>
+						<dt>邮箱：</dt>
+						<dd><input type="email" name='mail' required="true" id="mali" placeholder="请输入邮箱" onkeyup="funmail()" /><span id="sp3" style="color: #fff;"></span></dd>
+					</dl>
+					
+					<dl>
+						
+						<dd><input type="submit" id="sub" value="注册" /></dd>
+					</dl>
+				</form>
+			</div>
+		</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">返回</a></li>
+            <li><a href="login.html">登录</a></li>
+        </ul>
+    </nav>
+	<div id="" class="xss">©Xss</div>
+
+ </body>
+ <script type="text/javascript" src='js/lp.js'></script>
+
+ <script type="text/javascript">
+     function funname(){
+
+         var space=document.getElementById("name").value;
+         var sp1=document.getElementById("sp1");
+         var str = /^[a-zA-Z_]\w{5,15}$/;
+
+         if(space=="")
+             sp1.innerText="*用户不能为空";
+         else if(!space.match(str))
+             sp1.innerText="*请正确输入";
+         else
+             sp1.innerText=" ";
+     }
+
+
+     function checkLength(){
+         var pwd=document.getElementById("pwd").value;
+         var spanLen=document.getElementById("spanLen");
+         var str = /\w{6,10}$/;
+         var str1 = /\w{6,16}$/;
+         var str2 =/^\d{1,}$/;
+         var str3 =/^[a-zA-Z0-9_]\w{17,}$/;
+         console.log(str.test(pwd));
+
+         if(pwd.length<=6&&pwd.length>0)
+             spanLen.innerHTML="&nbsp;弱";
+         else if(str.test(pwd)==true && str2.test(pwd) == false &&pwd.length < 11  )
+             spanLen.innerHTML="&nbsp;中";
+         else if(str1.test(pwd)==true && str2.test(pwd) == false&&pwd.length < 17)
+             spanLen.innerHTML="&nbsp;强";
+         else  if(str3.test(pwd)==true)
+             spanLen.innerHTML="*超过16位";
+
+
+     }
+     function checkPSW(){
+         var pwd1=document.getElementById("pwd").value;
+         var pwd2=document.getElementById("pwd2").value;
+         var pswInfo=document.getElementById("pswInfo");
+         if(pwd1!=pwd2)
+             pswInfo.innerText="*两次密码不同";   // alert("两次密码不同");
+         else
+             pswInfo.innerText="";
+     }
+     //邮箱验证
+     function funmail(){
+
+         var mail=document.getElementById("mali").value;
+
+         var re=/^\w+@[a-zA-Z0-9]+\.(com|cn)$/;
+         var sp3=document.getElementById("sp3");
+
+         console.log(re.test(mail));
+         if(mail=="")
+             sp3.innerText="*邮箱不能为空";
+
+         else if(re.test(mail)== false)
+             sp3.innerText="*邮箱格式不正确";
+
+         else
+             sp3.innerText=" ";
+
+     }
+
+ </script>
+</html>

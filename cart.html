@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+    <link rel="shortcut icon" href="images/banner.png">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/style-cart.css">
+
+	<style type="text/css">
+	
+	</style>
+</head>
+<body>
+<div id="" class="xss">©Xss</div>
+	<div id='loginBar'>
+		 <div class="margin clear">
+             <span class="l" id='auser' style="width:60px"></span>
+		 	<span class='login l'>欢迎您登录</span>	
+		 	<div class='nav r'>
+
+                <a href="index.html">网站首页</a>
+
+				<a href="index1.html">网站前页</a>
+
+		 		<a href="about.html">关于我们</a>
+
+				<a href="contact.html">联系我们</a>
+
+				<a href="shop.php" id="shop">商店首页</a>
+
+				<a href="cart.html" id="car">查看购物车</a>
+
+                <a href="map.html">网站地图</a>
+
+		 	</div>
+		 </div>
+		
+	</div>
+		
+	<header>
+		<div class='margin'>
+		
+			<a href="index.html" class="logo l ">
+				<img src="images/banner.png">
+				<span>购物车</span>
+			</a>
+
+			<div class='all r'>
+				<input type='text' class='txt l'></input>
+				<input type='btn' class='search l ' value='搜索'></input>
+			</div>
+		</div>
+		
+
+	</header>
+
+	<main class='margin'> 
+
+		<div class='top'>
+			<h3 class='l'>全部商品</h3>
+			<p class='r'>已选商品 
+				<span class='total'></span>
+				<a href="#">结算</a>
+			</p>
+		</div>
+		<div class='center'>
+			<table id="list">
+
+                <tbody>
+                    <tr class='ap' style="margin-bottom:20px;">
+                        <td></td>
+                        <td>商品信息</td>
+                        <td>单价</td>
+                        <td>数量</td>
+                        <td>小计</td>
+                        <td>操作</td>
+                    </tr>
+                </tbody>
+            </table>
+			
+		</div>
+		<div class='bottom margin'>
+<!--			<div class='b-checkbox l '><input type='checkbox'>全选</div>-->
+<!--			<div class='b-del l'>删除</div>-->
+			<div class='b-all l'>已选商品 <span>1</span> 件</div>
+			<div class='b-total l '>合计: <span>￥50</span></div>
+			<div class='b-btn l'">结算</div>
+		</div>
+
+
+	</main>
+
+
+	
+</body>
+<script src="js/ajaxOOP.js"></script>
+<script type="text/javascript" src="js/myApi.js"></script>
+<script src="js/lp.js"></script>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/nav.js"></script>
+<script type="text/javascript">
+    cart();
+    cookieUser();
+</script>
+
+</html>

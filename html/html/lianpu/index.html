@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>脸谱介绍</title>
+    <link rel="shortcut icon" href="../../img/banner.png">
+    <link rel="stylesheet" href="../public.css">
+    <style>
+        .wrap{position:relative;margin:0 auto;width:100%;}
+        .wrap div{text-align:center;width:300px;position:absolute;padding:5px;float:left;box-shadow:0 0 5px #BF1E40;}
+        .wrap div img{width:200px;}
+        .wrap div p{text-align:center;}
+        .wrap div span{text-align:center;}
+    </style>
+</head>
+<body>
+<section id="wrap" class="wrap">
+
+    <!--<div>-->
+        <!--<h3>脸谱</h3>-->
+        <!--<a href="javascript:void(0)" title=""><img src="../../img/1(1).png" alt="" title="" /></a>-->
+        <!--<p>介绍</p>-->
+        <!--<span>备注</span>-->
+    <!--</div>-->
+</section>
+</body>
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script>
+    create();
+    function create() {
+        var str = '';
+        for(var j = 0 ; j < 50 ; j++){
+            str += `<div>
+                        <h3>脸谱</h3>
+                        <a href="javascript:void(0)" title=""><img src="../../img/1(${j+1}).png" alt="" title="" /></a>
+                        <p>介绍</p>
+                        <span>备注</span>
+                    </div>`
+        }
+        $('#wrap').html(str);
+    }
+    window.onload = function () {
+        pbl("wrap");
+    }
+    $(window).resize(function(){
+        pbl('wrap');
+    })
+    function pbl(ele,child,space) {
+        if(!ele){
+            return;
+        }
+        child = child || 'div';
+        space = space || 10;
+        var $bigBox = $('#' + ele);
+        var $childs = $bigBox.children(child);
+        var bigBoxWidth = $bigBox.width();
+        var childWidth = $childs.eq(0).outerWidth();
+        var colNum = Math.floor(bigBoxWidth / childWidth);
+        var padding = Math.floor((bigBoxWidth - childWidth * colNum) / (colNum + 1) );
+        var arr = [];
+        for(var i = 0; i < colNum ; i ++){
+            var obj = {};
+            obj.left = (i + 1) * padding + (i * childWidth);
+            obj.top = space;
+            arr.push(obj);
+        }
+        $childs.each(function () {
+            $(this).css('position','absolute');
+            var index = minHeight(arr);
+            $(this).animate({left:arr[index].left,top:arr[index].top},500,function () {
+
+            })
+            arr[index].top +=space + $(this).outerHeight();
+            $bigBox.css('height',arr[index].top);
+
+        })
+        function minHeight( arr) {
+            var index = 0;
+            var min = arr[0].top;
+            for(var i = 0 ,len = arr.length; i < len ; i++){
+                if(min > arr[i].top){
+                    min = arr[i].top;
+                    index = i;
+                }
+            }
+            return index;
+        }
+    }
+</script>
+</html>

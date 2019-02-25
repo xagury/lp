@@ -1,0 +1,93 @@
+nav{position: fixed;
+    right: 0px;
+    top: 0px;
+    z-index: 100001;}
+nav ul{overflow:hidden;}
+nav ul li{float: left;}
+nav ul li.user{margin-left:30px;display:block;width:100px;height:100px;box-sizing:border-box;padding:none;text-align:center;}
+
+nav ul li.user a.user{font: 12px/24px "";padding: 10px;}
+nav ul li a{color: rgb(255, 255, 255);display: block;font: 12px/24px "";padding: 10px;}
+nav ul li a:hover {text-shadow:0 0 5px #fff;}
+nav ul li.sli{}
+nav ul li.sli .lp-nav{z-index: 10001;display: none;position: fixed;top: 40px;right: 0px;width: 688px;min-height: 218px;line-height: normal;overflow: hidden;background: rgba(255, 255, 255,0.8);border-radius: 10px;}
+nav ul li.sli .lp-nav .lp-nav-content{}
+nav .lp-nav .lp-nav-content .lp-nav-content-mod:nth-child(1) {
+    width: 55%;
+}
+nav .lp-nav .lp-nav-content .lp-nav-content-mod:nth-child(2) {
+    width: 45%;
+}
+nav .lp-nav .lp-nav-content .lp-nav-content-mod {
+    float: left;
+    width: 33%;
+    overflow: hidden;
+}
+nav .lp-nav .lp-nav-content .lp-nav-content-mod .lp-nav-content-mod-wrap {
+    padding: 5px;
+    overflow: hidden;
+}
+nav .lp-nav .lp-nav-content .lp-nav-content-mod .lp-nav-content-mod-wrap .lp-nav-content-mod-hd {
+}
+nav h4 {
+    color: rgb(191, 30, 64);
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 600;
+    margin: 5px;
+    overflow: hidden;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+}
+nav h4 span {
+    color: rgb(191, 30, 64);
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 100;
+    font-family: arial;
+    opacity: 0.7;
+    box-shadow: none;
+    display: inline;
+    margin: 5px;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    background: none;
+}
+nav .lp-nav .lp-nav-content .lp-nav-content-mod .lp-nav-content-mod-wrap .lp-nav-content-mod-bd {
+    margin-top: -10px;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+}
+nav .lp-nav .lp-nav-content .lp-nav-content-mod .lp-nav-content-mod-wrap .lp-nav-content-mod-bd ul {
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+}
+nav .lp-nav .lp-nav-content .lp-nav-content-mod .lp-nav-content-mod-wrap .lp-nav-content-mod-bd ul li {
+    float: left;
+    padding-top: 5px;
+    width: 25%;
+    height: 25px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+nav .lp-nav .lp-nav-content .lp-nav-content-mod .lp-nav-content-mod-wrap .lp-nav-content-mod-bd ul li a {
+    position: relative;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    color:#333;
+    margin: 0px 5px;
+    padding: 0px 5px;
+    border-radius: 2px;
+}
+nav .lp-nav .lp-nav-content .lp-nav-content-mod .lp-nav-content-mod-wrap .lp-nav-content-mod-bd ul li a:hover{background:#BF1E40; color:#fff;}

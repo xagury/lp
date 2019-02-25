@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结算</title>
+    <link rel="shortcut icon" href="images/banner.png">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/style-buy.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+
+    <style type="text/css">
+            nav ul li a:hover{background:rgba(0,0,0,0.5);}
+           #loginBar .margin .nav nav .lp-nav{background:rgba(0,0,0,0.5);top:29px;}
+           #loginBar nav .lp-nav .lp-nav-content .lp-nav-content-mod .lp-nav-content-mod-wrap .lp-nav-content-mod-bd ul li a {    padding: 0px 5px;line-height:25px;}
+           #loginBar nav .lp-nav .lp-nav-content .lp-nav-content-mod .lp-nav-content-mod-wrap .lp-nav-content-mod-bd ul li a:hover{background:#BF1E40}
+    </style>
+</head>
+<body>
+
+<div id="" class="xss">©Xss</div>
+    <div id='loginBar'>
+         <div class="margin clear">
+             <span class="l" id='auser' style="width:60px"></span>
+            <span class='l'>欢迎您登录</span>    
+            <div class='nav r'>
+
+                <a href="index.html">网站首页</a>
+
+				<a href="index1.html">网站前页</a>
+
+		 		<a href="about.html">关于我们</a>
+
+				<a href="contact.html">联系我们</a>
+
+				<a href="shop.php" id="shop">商店首页</a>
+
+				<a href="cart.html" id="car">查看购物车</a>
+
+                <a href="map.html">网站地图</a>
+
+		 	</div>
+         </div>
+        
+    </div>
+        
+    <header>
+        <div class='margin'>
+        
+            <a href="#" class="logo l ">
+                <img src="images/banner.png">
+                <span>结算</span>
+            </a>
+        </div>
+        
+        
+    </header>
+
+    <main>
+        <h3>确认收货地址</h3> 
+        <div class='address'>
+            <span>请输入收货地址:</span>
+            <input type='text' class='site'></input>
+        </div>
+        <h3>确认商品信息</h3>
+        <div class='buyShop'>
+            <table id="list">
+
+
+                <tbody>
+                <tr>
+                    <td>商品名称</td>
+                    <td>单价</td>
+                    <td>数量</td>
+                    <td>总价</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class='account'>
+            <div class='xAccount'>
+                <p>实付款:<span class='Total'>150</span></p>
+                <div class='xTotal'>提交订单</div>
+            </div>
+        </div>
+    </main>
+      
+    <footer>
+        <div class='content'>
+    
+            <a href="#">用户反馈</a>
+            <a href="about.html">关于我们</a>
+            <a href="map.html">网站导航</a>
+
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src='js/myApi.js'></script>
+<script src="js/ajaxOOP.js"></script>
+<script type="text/javascript" src='js/lp.js'></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/nav.js"></script>
+<script type="text/javascript">
+    // xBuy();
+    cartBuy();
+    cookieUser();
+
+
+</script>
+
+
+</html>

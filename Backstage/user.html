@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的信息</title>
+    <link rel="shortcut icon" href="images/banner.png">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/style-admin.css">
+</head>
+<body>
+<div id="" class="xss">©Xss</div>
+    <div id='loginBar'>
+         <div class="margin">
+            <span id='exitN' class='aUser l'></span>
+            <span class='l'>欢迎您登录</span>
+            <span class='exit l' id="exit">退出</span>
+            <div class='nav r'>
+                
+                <a href="../index.html">网站首页</a>
+            </div>
+         </div>
+        
+    </div>
+        
+    <header>
+        <div class='margin'>
+            <span>后台管理</span>
+        </div>
+        
+        
+    </header>
+
+ <main>
+    <aside>
+        <div class='aside-user'>
+            <dl>
+                <dt>信息</dt>
+                <dd>
+                    <a href="person/information.php" target="test">我的信息</a>
+                </dd>
+                <dd>
+                    <a href="person/psd.php" target="test">密码修改</a>
+                </dd>
+                <dd>
+                    <a href="person/order.php" target="test">我的订单</a>
+                </dd>
+                <dd>
+                    <a href="person/comment.php" target="test">我的评论</a>
+                </dd>
+                 <dd>
+                    <a href="person/message.php" target="test">我的留言</a>
+                </dd>
+                
+                
+            </dl>
+            
+        </div>
+
+ 
+    </aside>
+    <section>
+        <div id='content' name="test">
+           <iframe src="" name="test">
+           </iframe>
+       </div>
+    </section>
+ </main>
+ <footer>
+        <div class='content'>
+            <a href="../feedback.html">用户反馈</a>
+            <a href="../about.html">关于我们</a>
+            <a href="../map.html">网站导航</a>
+        </div>
+     <?php echo $_COOKIE['name'];?>
+ </footer>
+</body>
+<script src="js/ajaxOOP.js"></script>
+<script src="js/cookie.js"></script>
+<script type="text/javascript" src='js/userJs.js'></script>
+<script type="text/javascript" src='../js/myApi.js'></script>
+<script src="../js/jquery-1.11.1.min.js"></script>
+
+<script type="text/javascript">
+
+
+    var xExit = document.querySelector('#exit');
+    var xUse = document.querySelector('.aUser');
+
+    xUse.innerHTML = getCookie('name');
+
+    xExit.onclick = function() {
+       if(confirm('是否退出?')) {
+           removeCookie('name');
+           location.href='../index.html';
+       }
+    }
+    xclick();
+
+
+
+</script>
+
+
+</html>

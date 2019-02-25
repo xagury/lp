@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>卡片旋转轮播</title>
+		<link rel="stylesheet" type="text/css" href="statics/css/style.css" />
+	</head>
+
+	<body>
+		<div id="banner">
+			<div id="carousel">
+				<img src="statics/images/1.png" data-url="#">
+				<img src="statics/images/2.png" data-url="#">
+				<img src="statics/images/3.png" data-url="#">
+				<img src="statics/images/4.png" data-url="#">
+				<img src="statics/images/5.png" data-url="#">
+				<img src="statics/images/6.png" data-url="#">
+				<img src="statics/images/7.png" data-url="#">
+				<img src="statics/images/8.png" data-url="#">
+			</div>
+		</div>
+		<script src="statics/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="statics/js/slider.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(function() {
+			    var timer=null;
+
+                    $('#carousel').carousel({
+                        curDisplay: 0, //默认索引
+                        autoPlay: true, //是否自动播放
+                        interval: 1000 //间隔时间
+                    });
+
+			});
+		</script>
+	</body>
+
+</html>

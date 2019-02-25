@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>花旦</title>
+		<!--css 层叠样式表 包装 衣服-->
+		<style>
+			*{margin:0;padding:0;font-family:"微软雅黑";}
+			body{overflow:hidden;}
+			#main{width:900px;height:575px;margin:20px auto;}
+			.left,.mid,.right{width:280px;height:575px;}
+			.left{float:left;}
+			.mid{float:left;margin-left:30px;}
+			.right{float:right;}
+			.txt,.pic{width:280px;height:310px;}
+			.bot{margin-top:15px;}
+			.txt{background:#4F3F3F;}
+			.txt h2{font-size:40px;color:#EB614A;text-align:center;padding-top:80px;}
+			.txt h3{font-size:12px;color:#EB614A;padding:0 20px;}
+			.txt p{font-size:12px;color:#fff;line-height:25px;padding:0 20px;}
+
+			img{animation:mov 2s infinite;}
+			@keyframes mov{
+				form{transform:rotateY(0deg);}
+				to{transform:rotateY(360deg);}
+			}
+
+			h2{animation:txt 2s infinite;}
+			@keyframes txt{
+				0%{text-shadow:0 0 0px #ff0;}
+				50%{text-shadow:0 0 10px #ff0;}
+				100%{text-shadow:0 0 0px #ff0;}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- div 盒子模型 -->
+		<div id="main">
+			<!--左边区域-->
+			<div class="left">
+				<img src="images/1.png" style ="display:block;width:280px;height:532px;margin-top:12px;" />
+			</div>
+
+			<!--中间区域-->
+			<div class="mid">
+				<!--文本-->
+				<div class="txt">
+
+					<h3 style="padding-top:70px;">花旦</h3>
+					<p>②花旦大多扮演青年女性。身着短衣裳，如褂子、
+裤子、裙子、袄；有时穿长衣裳，也绣着色彩艳丽的花样。人物性格大都活泼开朗，动作敏捷伶俐。表演以做功、说白为主，说白主要是京白，韵白较少。如《棒打薄情郎》中的金玉奴、《乌龙院》中的阎惜娇等。</p>
+				</div>
+
+				<!--图片-->
+				<div class="pic bot">
+					<img src="images/2.png"  style ="display:block;width:280px;height:220px;" />
+				</div>
+			</div>
+
+			<!--右边区域-->
+			<div class="right">
+				<!--图片-->
+				<div class="pic">
+					<img src="images/3.png" style ="display:block;width:280px;height:290px;"/>
+				</div>
+
+				<!--文字-->
+				<div class="txt bot" style="height:220px;">
+
+					<h3 style="padding-top:30px;">正旦</h3>
+					<p>①正旦俗称“青衣”，因所扮演的角色常穿青色褶子而得名。主要扮演庄重的青年、中年妇女，表演特点是以唱功为主，动作幅度较小.行动比较稳重。念韵白，唱功繁重。如《三击掌》中的王宝钏、《二进宫》中的李艳妃、《桑园会》中的罗敷女等。</p>
+				</div>
+				
+			</div>
+
+		</div>
+	</body>
+</html>
+<!--
+	id="身份证号"  class="名字 名字"
+-->

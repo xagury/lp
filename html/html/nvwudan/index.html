@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../public.css">
+    <style>
+        /*div{*/
+            /*color:#BF1E40;*/
+        /*}*/
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        
+        
+    </section>
+</body>
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script>
+
+    for(var i = 0 ; i < 8 ; i++){
+         $('ul li').eq(i).css('background','rgba(191,30,64,'+ ( Math.random() * 0.5 + 0.25 ) + ')');
+    }
+
+    $('section ul li').eq(0).mouseover(function(){
+
+        $(this).hide(2000,function(){
+            $(this).show(2000)
+        });
+
+    });
+
+    $('section ul li').eq(1).mouseover(function(){
+
+        $(this).toggle(5000);
+
+    });
+    $('section ul li').eq(2).mouseover(function(){
+
+        $(this).slideUp(3000,function(){
+            $(this).slideDown(3000)
+        });
+
+    });
+    $('section ul li').eq(3).mouseover(function(){
+
+        $(this).fadeOut(3000,function(){
+            $(this).fadeIn(3000,function(){
+                $(this).fadeTo(3000,0.5);
+            });
+        });
+
+    });
+    $('section ul li').eq(4).mouseover(function(){
+
+        $(this).fadeToggle(3000)
+
+    });
+
+
+
+
+</script>
+</html>

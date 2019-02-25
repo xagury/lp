@@ -1,0 +1,105 @@
+html, body {
+		height: 100%;
+	}
+
+	.margin{width:1182px;margin:0 auto;}
+	#loginBar{
+		height:30px;
+		font:12px/30px "";
+		color:#fff;
+		background:#BF1E40;
+	}
+	#loginBar span{
+		margin-left :40px;
+	}
+	#loginBar .nav a{
+		color:#fff;
+		font:12px/30px "";
+
+		padding:0 10px;
+
+	}
+
+
+	#loginBar .nav a:hover{
+		color: #ffffff;
+		text-shadow:0 0 10px #fff;
+	}
+
+	.xss{
+		position:fixed;
+		font:700 12px/24px "";
+		color:#f99;
+		text-shadow:0 0 5px #fff;
+		bottom:0;left:0;
+	}
+	header{
+		width:100%;
+		height:100px;
+		box-shadow:0 0 5px #fff;
+
+		background-size:cover;
+	}
+	header .logo{
+		margin:5px 0 0 30px;
+		display:block;
+		width:300px;
+		height:100px;
+	}
+	header .logo img{
+		width:90px;
+		height:80px;
+	}
+	header .logo span{
+		font:800 26px/80px "华文隶书";
+		color:#000;
+	}
+	header .all{
+		margin-top:30px;
+		margin-right:20px;
+		height:50px;
+	}
+	header .all .txt{
+		width:300px;
+		height:30px;
+		border:2px solid #BF1E40;
+		font:12px/30px "";
+		
+		padding: 0 5px;
+	}
+	header .all .search{
+		width:100px;
+		height:30px;
+		border:2px solid #BF1E40;
+		color:#Fff;
+		background:#BF1E40;
+		text-align: center;
+		font:12px/30px "";
+	}
+	main{ padding-top:30px;min-height:600px;box-sizing:border-box;}
+	main h3{padding:5px 20px;box-sizing:border-box;border-bottom:1px solid #BF1E40;width:80%;margin:0 auto;font:800 18px/18px "";color:#000;}
+	main .address{width:80%;margin:40px auto 0;height:70px;}
+	main .address span{font:18px/24px "";color:#222;margin-left:30px;}
+	main .address input{width:500px;height:24px;padding:0 5p x;border:1px solid #BF1E40;font:18px/24px "";color:#BF1E40;}
+	main .buyShop{width:80%;margin:10px auto 0;min-height: 300px;}
+	main .buyShop table{width:100%;}
+	main .buyShop table thead tr td{color:#222;font:16px/50px "";}
+	main .buyShop table tr{}
+	main .buyShop table tr td{font:12px/50px "";text-align: center;width:25%;height:50px;}
+	main .buyShop table tr td.buyTotal{color:#BF1E40;}
+	main .buyShop table tbody tr td img{width:30px;height:35px;}
+	main .account{border-top:1px solid #BF1E40;width:80%;margin:0 auto;height:200px;}
+	main .account .xAccount{margin-top:30px;float:right;width:300px;height:100px;}
+	main .account .xAccount p{border:1px solid #BF1E40;width:200px;padding:30px;text-align:center;font:14px/40px "";}
+	main .account .xAccount p span{margin-left:10px;font:700 18px/40px "";color:#BF1E40;}	
+	main .account .xAccount .xTotal{cursor:pointer;margin-left:162px;background:#BF1E40;color:#fff;height:40px;width:100px;text-align:center;font:14px/40px "";}
+	footer{margin-top:20px;box-shadow: 1px 0 10px #BF1E40;height:30px;background:#BF1E40;width:100%;color:#fff;text-align:center;}
+	
+	footer .content{}
+	footer .content a{display:blcok;padding:5px;font:12px/24px "";color:#Fff;}
+	footer .content a:hover{text-shadow: 0 0 5px #fff;}
+
+	.success{padding:200px;}
+	.success h3{font:800 26px/80px "";color:#000;}
+	.success a{font:12px/24px ""; color:#222;}
+	.success a:hover{color:#BF1E40;}

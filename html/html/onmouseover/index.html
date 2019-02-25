@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>onmousemove</title>
+	<link rel="stylesheet" type="text/css" href="../public.css">
+<style type="text/css">
+	img{
+		margin:100px 500px;
+		display: block;
+		position:fixed;
+		cursor:none;
+		width:200px;
+		height:250px;
+	}
+
+
+</style>
+	
+</head>
+<body>
+	<img src="../../img/1(1).png">
+</body>
+<script type="text/javascript">
+		
+	var oImg = document.querySelector('img');
+
+		var count = 1;
+
+		
+		function change(){
+
+
+			if(count >=70){
+				count = 1;
+			}
+			else 
+				count++;
+			
+			oImg.src = '../../img/1(' + count + ').png';
+		}
+		setInterval(function(){change();},400);
+
+</script>
+</html>

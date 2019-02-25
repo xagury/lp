@@ -1,0 +1,224 @@
+nav{position: fixed;
+    right: 0px;
+    top: 0px;
+    z-index: 100001;}
+nav .navC{overflow:hidden;}
+nav .navC .nav{float: left;}
+nav .navC .nav.user{margin-left:30px;display:block;width:100px;height:100px;box-sizing:border-box;padding:none;text-align:center;}
+#exit1{
+    width:20px;
+    height:20px;
+    position:absolute;
+    color:#fff;
+    border:1px solid #BF1E40;
+    z-index:1000000000000000001;
+    right:20px;
+    top:50px;
+    font:700 16px/20px "";
+    text-align:center;
+    cursor:pointer;
+    display:none;
+}
+#exit1:hover{
+    background:#BF1E40;
+    border-color:#fff;
+}
+
+nav .navC .nav.user a.user{font: 12px/24px "";padding: 10px;}
+nav .navC .nav a{color: rgb(255, 255, 255);display: block;font: 12px/24px "";padding: 10px;}
+nav .navC .nav a:hover {text-shadow:0 0 5px #fff;}
+nav .navC .nav {position: relative;}
+nav .navC .nav#help{position: relative;}
+nav .navC .nav#help .lp-nav{
+    z-index: 10001;
+    display:none;
+    position:fixed;
+    top: 50px;
+    right:105px;
+    width:245px;
+    min-height:106px;
+    background: rgba(0, 0, 0,0.8);
+    border-radius: 10px;}
+#nav .navC .nav b{
+    border:none;
+    box-shadow: none;
+    line-height: 25px;
+    color:#Fff;
+}
+
+nav .navC .nav#theme .lp-nav{
+    z-index: 10001;
+    display:block;
+    position:fixed;
+    top: 40px;
+    right: 10px;
+    width: 800px;
+    min-height: 200px;
+    line-height: normal;
+    overflow: hidden;
+    background: rgba(0, 0, 0,0.8);
+    border-radius: 10px;}
+nav .navC .nav#user .lp-nav{
+    z-index: 10001;
+    display:none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 240px;
+    min-height: 60px;
+    line-height: normal;
+    overflow: hidden;
+    background: rgba(0, 0,0,0.8);
+    border-radius: 10px;
+}
+nav .lp-nav1{
+    z-index: 1009991;
+    position:relative;
+    width: 333px;
+    min-height: 31px;
+    line-height: normal;
+    overflow: hidden;
+    background: rgba(0, 0, 0,0.8);
+    border-radius: 10px;}
+nav .lp-nav1 ul li  a{
+    display: inline-block;
+    border-right:1px solid #fff;
+}
+nav .lp-nav .lp-nav-content{
+    margin-top: -10px;
+    border-width: 0px;
+    padding: 5px;
+
+}
+nav .lp-nav .lp-nav-content ul {
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-width: 0px;
+}
+nav .lp-nav .lp-nav-content ul li {
+    float: left;
+    padding-top: 5px;
+
+    height: 25px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+nav .lp-nav .lp-nav-content  ul li a {
+    position: relative;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    color:#fff;
+    margin: 0px 5px;
+    padding: 0px 10px;
+    border-radius: 2px;
+}
+nav .lp-nav .lp-nav-content  ul li a:hover{
+    background:#BF1E40;
+    text-shadow: none;
+}
+
+
+#theme #allTheme{
+
+}
+#theme .lp-nav-content{
+    overflow: hidden;
+    width:100%;
+    height:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 10px;
+    border-width: 0;
+    padding: 20px;
+}
+#theme .lp-nav-content .leftTheme{
+    width:190px;
+    border-right:1px solid #BF1E40;
+}
+#theme .lp-nav-content .rightTheme{
+
+}
+#theme .lp-nav-content .kind{
+}
+#theme .lp-nav-content .kind .themeUl{
+    overflow:hidden;
+    display:none;
+    margin:0 auto;
+}
+#theme .lp-nav-content .kind .themeUl li{
+    padding:0 5px;
+    background:#BF1E40;
+    border:1px solid rgba(0, 0, 0,0.8);
+    float:left;
+    text-align:center;
+    cursor:pointer;
+}
+.Title{
+    z-index: 111111111111111111111;
+}
+.Title h3{
+    font:900 12px/24px "";
+    color:#fff;
+    background:#BF1E40;
+    width:60px;
+    text-align: center;
+    border:1px solid rgba(0, 0, 0,0.8);
+    cursor:pointer;
+    margin:5px auto;
+
+
+}
+#theme .lp-nav-content .kind .themeUl li a{
+    font:12px/40px "";
+    color:#fff;
+    display:inline;
+
+}
+.rightTop{
+    display:none;
+}
+.title1{
+    display:block;
+}
+nav #theme .lp-nav .lp-nav-content .rightTheme .rightTop ul{
+    margin:0 auto;
+}
+nav #theme .lp-nav .lp-nav-content .rightTheme .rightTop ul li {
+    padding:0;
+    margin: 0;
+    cursor:pointer;
+}
+nav #theme .lp-nav .lp-nav-content .rightTheme .rightTop ul li a.active{
+    background:#BF1E40;
+}
+.rightTheme .rightContent{
+
+}
+.rightTheme .rightContent .content{
+    margin-top:10px;
+
+}
+
+.rightTheme .rightContent .content .text{
+    overflow:hidden;
+    display:none;
+}
+.rightTheme .rightContent .content .text .textTxt{
+    width:300px;
+    color:#fff;
+    box-sizing: border-box;
+    padding:10px;
+    font:12px/24px "";
+}
+.rightTheme .rightContent .content .text .textImg{
+    width:250px;
+    height:200px;
+
+
+}
+.rightTheme .rightContent .content .text .textImg img{
+    width:250px;
+    height:200px;
+}

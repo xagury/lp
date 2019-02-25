@@ -1,0 +1,41 @@
+
+.top{font:800 14px/30px "";color:#fff;text-shadow: 0 0 5px #BF1E40;padding-bottom: 3px;margin:30px;border-bottom: 1px dashed #fff;}
+.top a{color: #fff;}
+.content{margin:20px auto;width:850px;}
+.content p{margin:30px auto;width:500px;}
+.content p span{width:100px;display:inline-block;font:16px/32px "";color:#fff;text-shadow: 0 0 5px #000;text-align: center;}
+.content p input{height:32px;width:300px;box-shadow:0 0 5px rgba(191,30,64,0.7);border: 0;}
+.content p input[type='radio']{display:inline-block;box-shadow:none; width:30px;padding:10px;}
+.content p input[type="submit"]{ width:300px;margin:20px 0 0 100px;height:32px; background:#ffcccc; color:#fff; font-size:18px; font-weight:700; transition:all 500ms;}
+.content p input[type="submit"]:hover{background:rgb(241,147,156); color:#fff;}
+.con{margin:20px auto;width:850px;}
+.content table:first-child{min-height:200px;}
+.con tr td:last-child{width:100px;overflow: hidden;}
+.con tr.top td{height:40px;font:900 16px/40px "";background: #BF1E40;}
+.con tr.top td:nth-child(4){width:150px;}
+.con tr.top td:last-child{width:200px;}
+/*所有商品*/
+
+table{width:100%;}
+tr{width:100%;}
+
+tr td{width:13%;height:40px;text-align: center;color:#fff;font:14px/40px "";}
+.content tr td:nth-child(4){height:40px;font:14px/40px "";width:140px;}
+
+tr .std{width:200px;overflow: hidden;}
+tr .std i{cursor:pointer;float:left;display:inline-block;height:40px;color:#fff;box-shadow:0 0 5px #BF1E40;padding:0 9px;margin:0 10px;}
+tr .std b{cursor:pointer;float:left;display:inline-block;height:40px;color:#fff;box-shadow:0 0 5px #BF1E40;padding:0 9px;}
+tr .std a{font:700 16px/40px "";background:#fff;color:#BF1E40;cursor:pointer;float:left;display:block;width:100%;height:40px;margin:0 10px;}
+tr .std a:hover{background:#BF1E40;color:#fff; }
+tr .std i:hover{background:#BF1E40;color:#fff; }
+tr .std b:hover{background:#BF1E40;color:#fff; }
+
+.content table:first-child{margin-bottom:20px;}
+table tr td #barcon{color:#fff;border:1px solid #BF1E40;margin-top:20px;position: relative;}
+table tr td #barcon a{display:inline;float:none;color:#Fff;margin:0 10px;}
+table tr td #barcon a:hover{color:#BF1E40;}
+table tr td #barcon span{margin:0 10px;}
+
+.commentDiv .cBox span{float:left;width:100px;color:#222;font:16px/32px "";margin-top:22px;}
+.commentDiv .cBox p{float:left;color:#222;font:16px/32px "";width:200px;margin-top:22px;}
+.commentDiv .cBox img{float:right;width:30px;height:30px;}

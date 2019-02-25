@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员页面</title>
+    <link rel="shortcut icon" href="images/banner.png">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/style-admin.css">
+
+</head>
+<body>
+<div id="" class="xss">©Xss</div>
+    <div id='loginBar' class="clear">
+
+            <span id='exitN' class='aUser l'></span>
+            <span class='l'>欢迎您登录</span>
+            <span class='exit l' id="exit">退出</span>
+            <div class='nav r'>
+
+    
+                <a href="../map.html">网站地图</a>
+    
+
+
+            </div>
+        
+        
+    </div>
+        
+    <header>
+        <div class="content">
+            
+            <span>后台管理</span>
+        </div>
+            
+        
+    </header>
+ <main>
+    <aside>
+        <div class='aside-user'>
+            <dl>
+                <dt>用户管理</dt>
+                <dd>
+                    <a href="user/all.php" id="all" target="test">所有用户</a>
+                </dd>
+                <dd>
+                    <a href="user/add.php" target="test">增加用户</a>
+                </dd>
+                <dd>
+                    <a href="user/delete.php" target="test">删除用户</a>
+                </dd>
+                <dd>
+                    <a href="user/update.php" target="test" id="update">修改用户信息</a>
+                </dd>
+                
+            </dl>
+            
+        </div>
+        <div class="aside-shop">
+            <dl>
+                <dt>商品管理</dt>
+                <dd>
+                    <a href="shop/all.php" target="test">所有商品</a>
+                </dd>
+                <dd>
+                    <a href="shop/add.php" target="test">增加商品</a>
+                </dd>
+                <dd>
+                    <a href="shop/delete.php" target="test">删除商品</a>
+                </dd>
+                <dd>
+                    <a href="shop/update.php" target="test">修改商品信息</a>
+                </dd>
+                <dd>
+                    <a href="shop/order.php" target="test">订单发货</a>
+                </dd>
+
+            </dl>
+
+        </div>
+        <div class="aside-detail">
+            <dl>
+                <dt>信息管理</dt>
+                <dd>
+                    <a href="message/comment.php" target="test">审核评论</a>
+                </dd>
+               
+                <dd>
+                    <a href="message/message.php" target="test">审核留言</a>
+                </dd>
+           
+            </dl>
+        </div>
+    </aside>
+    <section >
+
+       <div id='content' name="test">
+           <iframe src="" name="test">
+           </iframe>
+       </div>
+    </section>
+ </main>
+ <footer>
+        <div class='content'>
+            <a href="../feedback.html">用户反馈</a>
+            <a href="../about.html">关于我们</a>
+            <a href="../map.html">网站导航</a>
+        </div>
+
+ </footer>
+</body>
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/jquery-1.11.0.js"></script>
+<script src="js/ajaxOOP.js"></script>
+<script src="js/cookie.js"></script>
+<script type="text/javascript" src='../js/myApi.js'></script>
+<script type="text/javascript" src='js/backjs.js'></script>
+
+
+<script type="text/javascript">
+
+    var xExit = document.querySelector('#exit');
+    var xUse = document.querySelector('.aUser');
+    if(getCookie('name')=='admin'){
+        xUse.innerHTML = '管理员';
+    }
+
+
+    xExit.onclick = function() {
+        if(confirm('是否退出?')) {
+            removeCookie('name');
+            location.href='../index.html';
+        }
+    }
+    xclick();
+
+
+</script>
+
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>jquery鼠标悬停图片居中放大代码</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+$(function () {
+	
+	imgZoomInit()//模块初始化
+})
+
+
+/*
+* 图片放大展示
+* 2015-01-04
+* nizilam
+*/
+function imgZoomInit(){
+	$('.piclist li.pic').append(function(){
+		ht = $(this).find('.in').html();
+		return "<div class='original'>"+ht+"</div>";
+	});
+	
+	$(".piclist li.pic .in img").each(function(i){
+		var img = $(this);
+		var realWidth ;//原始宽度
+		var realHeight ;//原始高度
+		var vs ;//图片宽高比
+		
+		realWidth = this.width;
+		realHeight = this.height;
+		vs = realWidth/realHeight;
+			
+		//缩略图比例230:142(约等于1.62)
+		if(vs>=1.62){//横图则固定高度
+			$(img).css("width","auto").css("height","142px").css("marginLeft",115-(71*realWidth/realHeight)+"px");
+		}
+		else{//竖图则固定宽度
+			$(img).css("width","230px").css("height","auto").css("marginTop",71-(115*realHeight/realWidth)+"px");
+		}
+		
+		//图片放大水平垂直居中显示
+		if(vs>=1){//横图或正方形
+			$(img).parent().parent().parent().find('.original img').height(260);
+			$(img).parent().parent().parent().find('.original img').width('auto');
+			$(img).parent().parent().parent().find('.original').css({
+				//此处需结合实际情况计算 左偏移：.original实际宽度的二分之一
+				marginLeft: function(){
+					return -(130*realWidth/realHeight)-6;
+				},
+				left:'50%'
+			})
+		}else{//竖图
+			$(img).parent().parent().parent().find('.original img').width(260);
+			$(img).parent().parent().parent().find('.original img').height('auto');
+			$(img).parent().parent().parent().find('.original').css({
+				//此处需结合实际情况计算 上偏移：.original实际高度的二分之一
+				marginTop: function(){
+					return -(130*realHeight/realWidth)-36;
+				},
+				top:'50%'
+			});
+			$(img).parent().parent().parent().find('.original b').css('display','block')
+		}		
+	});
+
+	
+	$('.piclist li.pic').hover(function(){
+			$(this).addClass('on');
+		},function(){
+			$(this).removeClass('on');	
+	})
+	
+	$(".piclist ul li:nth-child(4n)").addClass('r');
+}
+
+
+</script>
+</head>
+
+<body>
+<!-- 要求img标签必须带上width和height属性 -->
+<div class="picbox">
+	
+    <h2>白脸</h2>			
+   
+    <div class="picshow picshow01">
+        <div class="piclist">   
+            <ul>
+                <li class="pic" id="tes">
+                <div class="in">
+                    <div class="imgdiv"><img src="../fujing/index.png" alt="" width="458" height="330"/></div>
+                    <span><b>粉白脸</b>粉白脸，又称抹脸，即用白粉涂面以示不以真面目示人之意</span>
+                </div>   
+                </li>
+                <li class="pic">
+                <div class="in">
+                    <div class="imgdiv"><img src="images/2.jpg" alt="" width="395" height="600" /></div>
+                    <span><b>油白脸</b>白色脸（又称油白脸）有几种用意：</span>
+                </div>    
+                </li>
+                <li class="pic">
+                <div class="in">
+                    <div class="imgdiv"><img src="images/3.jpg" alt="" width="450" height="300" /></div>
+                    <span><b>其他说法</b>又一说白脸又分水白脸和油白脸。</span>
+                </div>    
+                </li>
+                <li class="pic">
+                <div class="in">
+                    <div class="imgdiv"><img src="images/4.jpg" alt="" width="749" height="300" /></div>
+                    <span><b>什么是红脸白脸</b>人们把由于表扬与批评所起的正反心理效应地现象，称之为“白脸红脸效应”。</span>
+                </div>   
+                </li>
+                <li class="pic">
+                <div class="in">
+                    <div class="imgdiv"><img src="images/5.jpg" alt="" width="347" height="320" /></div>
+                    <span><b>白脸红脸效应的产生</b>白脸——批评的“ 火炉”预警作用。 。</span>
+                </div>   
+                </li>
+                <li class="pic">
+                <div class="in">
+                    <div class="imgdiv"><img src="images/6.jpg" alt="" width="406" height="300" /></div>
+                    <span><b>如何配合唱好红脸白脸的注意事项</b>起配合共事，首先管理者要有共识.</span>
+                </div>   
+                </li>
+                <li class="pic">
+                <div class="in">
+                    <div class="imgdiv"><img src="images/7.jpg" alt="" width="450" height="614" /></div>
+                    <span><b>家庭教育中的“红脸白脸”</b>一严一宽、一硬一软，夫妻配合默契。</span>
+                </div>    
+                </li>
+                <li class="pic">
+                <div class="in">
+                    <div class="imgdiv"><img src="../zhengjing/index.png" alt="" width="440" height="616" /></div>
+                    <span><b>脸谱简介</b>脸谱是中国传统戏曲演员面部性格特点。</span>
+                </div>
+                </li>
+        </ul>
+        </div> 
+    </div>      
+</div>
+</body>
+</html>

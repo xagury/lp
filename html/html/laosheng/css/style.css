@@ -1,0 +1,33 @@
+
+/*body{background:url(../images/.jpg) no-repeat;background-size:cover;}*/
+.margin{width:1182px;margin:0 auto;}
+
+
+main{overflow:hidden;margin:100px auto;}
+
+
+
+main .main-t{}
+main .main-t{width:1182px; height:280px; border:6px solid #fff; margin:0px auto;background:#000000; overflow:hidden;}
+main .main-t ul{width:3182px; }
+main .main-t ul li{width:300px; height:280px; float:left; list-style:none; border-left:1px solid #ddd; box-shadow:0px 0px 20px 5px rgba(0,0,0,0.1); transition:all 1s; position:relative;/*参照物*/}
+
+main .main-t ul li:nth-child(1){background:#663300;}
+main .main-t ul li:nth-child(2){background:#330066;}
+main .main-t ul li:nth-child(3){background:#330033;}
+main .main-t ul li:nth-child(4){background:#000000;}
+
+
+main .main-t ul:hover li{width:40px;}
+main .main-t ul li:hover{width:1030px;}
+main .main-t .course{position:absolute; top:45px; left:20px; width:980px;}
+main .main-t .course dl{float:left;  width:220px; height:190px; border:1px solid #fff; margin:0px 10px; box-shadow:0px 0px 5px #ccc; text-align:center;}
+main .main-t ul li dt img{width:220px;height:190px;}
+main .main-t .course dl dt{  width:220px; height:190px;font:700 14px/30px "";color:#fff;text-align:center;text-shadow:1px 1px 10px #000;}
+main .main-t .course dl dd{font-weight:bold; background:rgba(0,0,0,0.5); }
+main .main-t ul li p{width:300px; height:280px; background:rgba(0,0,0,0.5); position:absolute; line-height:280px;font-weight:bold;  text-align:center;transition:all 1s; }
+main .main-t ul li .titel1{top:0px; left:0px;color:#fff;font-size:14px;text-shadow:1px 1px 10px #fff;}
+main .main-t ul li .titel2{bottom:0px; left:0px;color:#f00;}
+main .main-t ul li:hover p{width:1030px;height:0px;line-height:40px;}
+main .main-t ul li:hover p.titel2{font:0px "";text-align:center}
+main .main-t ul li p{color:#f5150a;font-size:50px;text-shadow:1px 1px 10px #fff;text-align:center}

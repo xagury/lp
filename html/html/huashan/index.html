@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			
+			*{margin: 0;padding: 0;}
+			section{width: 1000px;height: 320px;margin:100px auto;overflow: hidden;}
+			div{width: 200px;height: 320px;float: left;}
+			article{width: 120%;height: 100%;}
+		</style>
+	</head>
+	<body>
+		<section class="box">
+		 <article>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</article>
+		</section>
+	</body>
+	<script src="js/move.js">
+		
+	</script>
+	<script type="text/javascript">
+		var oBox = document.querySelector("section");
+		var oDiv = document.querySelectorAll("div")
+		for(let i = 0 ; i < oDiv.length; i++){
+            oDiv[i].style.backgroundImage =`url(images/${i+1}.jpg)`	
+            oDiv[i].style.backgroundSize = "100% 100%"
+            oDiv[i].onmouseover = function(){
+            	for(let j=0;j < oDiv.length; j++ ){
+            		move(oDiv[j],{width:100})
+            		move(this,{width:600})
+            	}
+            }
+             oDiv[i].onmouseout = function(){
+            	for(let j=0;j < oDiv.length; j++ ){
+            		move(oDiv[j],{width:200})
+            		
+            	}
+            }
+		}
+		
+	</script>
+</html>

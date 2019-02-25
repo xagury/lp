@@ -1,0 +1,50 @@
+  html{height:100%;}
+	body {
+	background:url("../images/bj.png") center no-repeat;
+	background-size:cover;
+	height:100%;
+	overflow:hidden;
+}
+
+	#login{width:400px; height:500px;background:rgba(255,255,255,0.5); margin:auto auto;margin-top:50px;}
+	#login .login_top{height:60px;background:#dc5a5a;text-align:center;color:#fff; font-size:18px; line-height:60px;font-weight:600;overflow:hidden;}
+
+
+
+	#login .login_logo a{display:block;width:180px; height:180px;margin:20px auto; background:#cc0033 url("../images/login_logo.png")no-repeat center ;background-size:cover; border-radius:50%;}
+
+
+
+	/*公用的input*/
+	input{width:340px; height:45px; margin:5px 0px;border-radius:5px;border:none; font-size:14px;}
+	#login  .login_input{ width:340px; margin:0px auto;}
+	#login  .login_input input{  background:#ffcccc; padding-left:12px;color:#fff; }
+	#login  .login_btn{ width:340px; margin:10px auto;padding-left:12px;}
+	#login  .login_btn input{ background:#dc5a5a; color:#fff; box-shadow:0px 5px 0px #992f2f; /*css3阴影 水平 垂直 扩散*/}
+	#login  .login_btn input:hover{box-shadow:0px -5px 0px #992f2f;}
+	.footer{text-align:center;}
+	.footer a{color:#d5d5d5;font-size:14px;}
+	.footer span{color:#d5d5d5;font-size:14px;}
+	.footer a:hover{color:#dc5a5a;}
+	footer{
+	position:fixed;
+	right:0;bottom:0;
+		z-index:1;
+	
+	}
+	footer a{
+	color:#d5d5d5;
+	font:12px/24px "";
+	display:block;
+	float:left;
+	padding:10px;
+
+	}
+	footer a:hover{color:#dc5a5a;}
+	.xss{
+	position:fixed;
+	font:700 12px/24px "";
+	color:#f99;
+	text-shadow:0 0 5px #fff;
+	bottom:0;left:0;
+}

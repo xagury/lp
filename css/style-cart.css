@@ -1,0 +1,195 @@
+html, body {
+		height: 100%;
+	}
+
+	.margin{width:1182px;margin:0 auto;}
+	#loginBar{
+		height:30px;
+		font:12px/30px "";
+		color:#fff;
+		background:#BF1E40;
+	
+	}
+	#loginBar .nav a{
+		color:#fff;
+		font:12px/30px "";
+		padding:0 10px;
+	}
+
+	#loginBar .nav a:hover{
+		color: #ffffff;
+		text-shadow:0 0 10px #fff;
+	}
+
+	.xss{
+		position:fixed;
+		font:700 12px/24px "";
+		color:#f99;
+		text-shadow:0 0 5px #fff;
+		bottom:0;left:0;
+	}
+	header{
+		width:100%;
+		height:100px;
+		box-shadow:0 0 5px #fff;
+
+		background-size:cover;
+	}
+	header .logo{
+		margin-top:5px;
+		display:block;
+		width:300px;
+		height:100px;
+	}
+	header .logo img{
+		width:90px;
+		height:80px;
+	}
+	header .logo span{
+		font:800 26px/80px "华文隶书";
+		color:#000;
+	}
+	header .all{
+		margin-top:30px;
+		margin-right:20px;
+		height:50px;
+	}
+	header .all .txt{
+		width:300px;
+		height:30px;
+		border:2px solid #BF1E40;
+		font:12px/30px "";
+		
+		padding: 0 5px;
+	}
+	header .all .search{
+		width:100px;
+		height:30px;
+		border:2px solid #BF1E40;
+		color:#Fff;
+		background:#BF1E40;
+		text-align: center;
+		font:12px/30px "";
+	}
+	main{ padding-top:30px; }
+	main .top{
+		border-bottom:1px solid #d5d5d5;
+		height:50px;
+	}
+	main .top h3{
+		font:18px/50px "";
+		color:#BF1E40;
+		width:100px;
+		text-align:center;
+		border-bottom:1px solid #BF1E40;;
+	}
+	main .top p{
+		margin-right:50px;
+		font:12px/50px "";
+		color:#000;
+		text-align:center;
+	}
+	main .top p span{
+		font:12px/50px "";
+		color:#BF1E40;
+	}
+	main .top p a{
+		font:700 14px/50px "";
+		color:#BF1E40;
+		margin-left:10px;
+		
+	}
+	main .center{
+		margin-top:30px;
+
+	}
+	main .center .center-checkbox{
+		font:12px/20px "";
+		color:#d5d5d5;
+		height:20px;
+	}
+	main .bottom{
+		position:fixed;
+		bottom:0;
+		left:0;right:0;
+		margin:auto;
+		height:50px;
+		background:#d5d5d5;
+		font:14px/50px "";
+		color:#fff; 
+	}
+	main .bottom span{
+		color:#BF1E40;
+		margin:0 10px;
+	}
+	main .bottom div{
+		margin: 0 20px;
+	}
+	main .bottom div.b-all{
+		margin-left:500px;
+	}
+	main .bottom div.b-total{
+		margin-left:50px;
+	}
+	main .bottom div.b-btn{
+		background:#BF1E40;
+		width:100px;
+		font:14px/40px "";
+		text-align:center;
+		height:40px;
+		margin-top:5px;
+	}
+	main .center #list {
+            width: 100%;
+            text-align: center;
+            border-spacing: 0;
+            table-layout: fixed;
+            margin: 20px auto;
+        }
+        
+    main .center #list>tbody>tr {
+            color:#999;
+            font:12px/30px "";
+            height: 30px;
+        }
+        
+    main .center #list>tbody>tr>td {
+            margin-left: 30px;
+            width: 20%;
+        }
+        main .center #list>tbody>tr>td:first-child{
+        	width:15px;height:15px;}
+        
+    main .center #list>tbody>tr>td>button {
+            height: 22px;
+            width: 30px;
+            font-size: 18px;
+            outline: none;
+        }
+        
+    main .center #list>tbody>tr>td>button,
+    main .center #list>tbody>tr>td>input {
+            border: 0;
+            float: left;
+            margin-left:33px;
+        }
+        
+    main .center .reduce {
+            margin-left: 30px;
+        }
+        
+    main .center .num {
+            text-align: center;
+        }
+        
+    main .center #list>tbody>tr>td>input {
+            width: 40px;
+            height: 20px;
+        }
+        
+    main .center .smallPic {
+            width: 35px;
+            height: 35px;
+        }
+
+.cart{width:30px;height:200px;position:fixed;right:0;top:50%;}

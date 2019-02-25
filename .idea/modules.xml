@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://F:/qf/nodeJs/Ateacher/.idea/Ateacher.iml" filepath="F:/qf/nodeJs/Ateacher/.idea/Ateacher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../aiyingshi/.idea/aiyingshi.iml" filepath="$PROJECT_DIR$/../aiyingshi/.idea/aiyingshi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/lp.iml" filepath="$PROJECT_DIR$/.idea/lp.iml" />
+      <module fileurl="file://F:/qf/js/项思雅/.idea/项思雅.iml" filepath="F:/qf/js/项思雅/.idea/项思雅.iml" />
+    </modules>
+  </component>
+</project>

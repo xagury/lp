@@ -1,0 +1,67 @@
+<?php
+	ob_start();      	//打开缓冲区
+	session_start();	//初始化会话数据
+	require("config/config.php");
+
+?>
+<!doctype html>
+<html lang="en">
+<head>
+ <!--声明当前页面的编码格式 UTF-8（国际编码）gbk(中文简体)-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<!--声明当前页面的三要素-->
+	<title>login</title>
+	<meta name="Keywords" content="关键字">
+	<meta name="Description" content="描述">
+    <link rel="shortcut icon" href="images/banner.png">
+    <link rel="shortcut icon" href="images/banner.png">
+	<link type="text/css" rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/style-login.css">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">返回</a></li>
+        </ul>
+    </nav>
+		<div id="login" >
+			<div class="login_top">
+				登录	
+			</div>
+			<div class="login_logo">
+				<a href=""></a>
+			</div>
+
+
+			<!--action  提交到那个页面去 -->
+			<form  name="register" method="post" action="sql/sql-login.php">
+			<div class="login_input">
+				<input type="text" class='name' name ='id' placeholder="用户名" required/>
+				<input type="password" class='psd' name='psd' placeholder="密码" required/>
+			</div>
+			<div class="login_btn">
+				<input type="submit" name="submit" class='btn'value="登录"/>
+			</div>
+			</form>
+
+			<div  class="footer">
+			
+				<a href="register.html">注册新用户</a>
+				<span class="">|</span>
+				<a href="#">忘记密码?</a>
+				
+			</div>
+		</div>
+
+	<div  class="xss">©Xss</div>
+
+
+
+ </body>
+
+ <script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+</script>
+</html>

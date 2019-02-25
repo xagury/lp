@@ -1,0 +1,230 @@
+html, body {
+		height: 100%;
+	}
+
+	.margin{width:1182px;margin:0 auto;}
+	#loginBar{
+		height:30px;
+		font:12px/30px "";
+		color:#fff;
+		background:#BF1E40;
+	}
+	#loginBar span{
+		margin-left :30px;
+	}
+	#loginBar .nav a{
+		color:#fff;
+		font:12px/30px "";
+
+		padding:0 10px;
+
+	}
+
+
+	#loginBar .nav a:hover{
+		color: #ffffff;
+		text-shadow:0 0 10px #fff;
+	}
+
+	.xss{
+		position:fixed;
+		font:700 12px/24px "";
+		color:#f99;
+		text-shadow:0 0 5px #fff;
+		bottom:0;left:0;
+	}
+	header{
+		width:100%;
+		height:100px;
+		box-shadow:0 0 5px #fff;
+
+		background-size:cover;
+	}
+	header .logo{
+		margin:5px 0 0 30px;
+		display:block;
+		width:300px;
+		height:100px;
+	}
+	header .logo img{
+		width:90px;
+		height:80px;
+	}
+	header .logo span{
+		font:800 26px/80px "华文隶书";
+		color:#000;
+	}
+	header .all{
+		margin-top:30px;
+		margin-right:20px;
+		height:50px;
+	}
+	header .all .txt{
+		width:300px;
+		height:30px;
+		border:2px solid #BF1E40;
+		font:12px/30px "";
+		
+		padding: 0 5px;
+	}
+	header .all .search{
+		width:100px;
+		height:30px;
+		border:2px solid #BF1E40;
+		color:#Fff;
+		background:#BF1E40;
+		text-align: center;
+		font:12px/30px "";
+	}
+	main{ padding-top:30px;padding-bottom: 50px;}
+	main #list {
+            width:1182px;
+            margin: 50px auto;
+            overflow:hidden;
+        }
+        
+    main #list>li {
+            width: 250px;
+            list-style: none;
+            float: left;
+            height: 300px;
+            margin-left:30px;
+            margin-bottom: 30px;
+            text-align:center;
+            border:1px solid #eaeaea;
+        }
+    main #list li:hover{border:1px solid #BF1E40;}    
+
+    main img{margin:10px auto;width:200px;height:220px;display:block;}
+    main .pirce {
+    		margin-top:10px;
+            font-size: 18px;
+            color: #e60012;
+            font-weight: 900;
+            line-height: 18px;
+            padding: 0 5px;
+            margin-bottom: 10px;
+        }
+        
+    main .mainTitle {
+          	color:#BF1E40;
+            font:700 16px/16px "";
+            padding: 5px 10px;
+        }
+        
+
+	footer{
+		
+	}
+	footer .page{
+		overflow: hidden;
+   		position: relative;
+    	padding: 10px 0;
+    	height: 37px;
+    	min-width: 650px;
+    	margin: 20px auto 0; 
+	}
+	footer .page ul{
+		height: 37px;
+		width: 650px;
+		margin:0 auto;
+		  
+	}
+footer #barcon{margin:0 auto;width:60%;}
+	footer #barcon span{
+		padding:10px;
+		border:1px solid #ededed;
+		font:12px/32px "";
+		color:#222;
+		margin:0 10px;
+	}
+	footer #barcon a{
+		margin:0 10px;
+		padding:10px;
+		border:1px solid #ededed;
+		font:12px/32px "";
+		color:#222;
+	}
+	footer #barcon a:hover{border-color:#BF1E40;}
+	.copyRight{margin-top:20px;height:40px;background:#BF1E40;}
+	.item{
+		margin-left: -1px;
+    	width: 35px;
+   	 	border: solid 1px #ededed;
+   	 	height: 35px;
+    	color: #3e3e3e;
+    	text-align: center;
+    	line-height: 35px;
+    	cursor: pointer;
+    	-webkit-transition: all .1s linear;
+    	-moz-transition: all .1s linear;
+    	-o-transition: all .1s linear;
+    	transition: all .1s linear;
+	}
+	.item:hover{
+		  z-index: 1;
+   		 border-color: #f40;
+   		
+	}
+	.item:hover a{
+		 color:#f40;
+	}
+	.prev{
+    width: 70px;
+    font-weight: 400;
+	}
+	.active a{color:#fff;}
+	.active{
+
+		position: relative;
+	    z-index: 1;
+	    /*background: #f40;*/
+	    color: #fff;
+	    border-color: #fff;
+	    cursor: default;
+	    text-decoration: none;
+	}
+
+	.hover{
+
+		position: relative;
+	    z-index: 1;
+	    background: #fff;
+	    color: #fff;
+	    /*border-color: #f40;*/
+	    cursor: default;
+	    text-decoration: none;
+	}
+	footer .page ul li span{
+
+	}
+	/*购物车*/
+	.cart{width:30px;
+		height:200px;
+		position:fixed;
+		right:0;top:200px;
+		font:16px/30px "";
+		color:#Fff;
+		background:#BF1E40;
+		text-align: center;
+		cursor:pointer;
+		 }
+		 .cart b{display: block;width:0;margin:0 auto;margin-top:15px;
+		 	border-bottom:10px solid #fff;
+		 	border-left:10px solid #BF1E40;
+		 	border-right:10px solid #BF1E40;
+		 }
+		 .cart i{display: block;width:0;margin:0px auto;
+		 	border-top:10px solid #fff;
+		 	border-left:10px solid #BF1E40;
+		 	border-right:10px solid #BF1E40;
+		 }
+	span.cart{
+			display:block;
+			width:14px;
+			height:14px;
+			background:#f99;
+			position:absolute;
+			border-radius:7px;
+			z-index: 100;
+		}

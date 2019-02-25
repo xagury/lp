@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<title></title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			html {
+				height: 100%;
+			}
+			body {
+				height: 100%;
+			}
+			img {
+				border: 0;
+			}
+			div.wrap {
+				width: 100%;
+				margin: 0 auto;
+				overflow: hidden;
+				position: relative;
+
+			}
+			div.wrap div {
+				width: 200px;
+				padding: 4px;
+				border: 1px dashed #f99;
+				float: left;
+				position: absolute;
+			}
+			div.wrap div h3 {
+				font:18px/28px "";
+				color: #f99; 
+				margin: 5px 12px;
+			}
+			div.wrap div img {
+				width: 200px;
+			}
+			div.wrap div p{
+				font:12px/24px "";
+				color: #fff;
+				text-indent: 2em;
+				}
+
+			.box h3{width: 400px;height: 60px;margin: 0 auto;text-align: center;font: 40px/60px "";}
+			.box p{width: 800px;margin: 0 auto;font: 16px/36px "";text-indent: 2em;}
+		</style>
+		<script>
+			window.onload = function(){
+				pbl('wrap');
+			}
+			window.onresize = function(){
+				pbl('wrap');
+			}
+			function pbl(ele,children,space){
+				//初始化参数
+				if(!ele){
+					return;
+				}
+				children = children || 'div';
+				space = space || 10;
+				//获取元素
+				//获取大盒子
+				let oBigBox = document.getElementById(ele);
+				//获取子节点
+				let oChild = oBigBox.getElementsByTagName(children);
+				//获取大盒子的宽
+				let oBigBoxWidth = oBigBox.offsetWidth;
+				//获取一个子节点的宽
+				let oChildWidth = oChild[0].offsetWidth;
+				//计算列数
+				let colNum = Math.floor(oBigBoxWidth / oChildWidth);
+				//每一列的左右间隔
+				let padding = Math.floor((oBigBoxWidth - colNum * oChildWidth) / (colNum + 1));
+				
+				//初始化位置（第一行的位置）
+				let arr = [];
+				for(let i = 0;i < colNum;i ++){
+					arr[i] = new Object();
+					arr[i].left = (i * oChildWidth) + (i + 1) * padding;
+					arr[i].top = space;
+				}
+				sub = 0;
+				//加载图片
+				for(let i = 0,len = oChild.length;i < len;i ++){
+					
+					if((i + 1) % colNum){
+						sub = (i + 1) % colNum;
+					}else{
+						sub = colNum;
+					}
+					oChild[i].style.position = 'absolute';
+					console.log(arr[sub - 1].left,arr[sub-1].top);
+					oChild[i].style.left = arr[sub - 1].left + 'px';
+					oChild[i].style.top = arr[sub - 1].top + 'px';
+					arr[sub - 1].top += oChild[i].offsetHeight + space;
+				}
+				//求最大高度
+				var maxHeight = arr[0].top;
+				for(let i = 0,len = arr.length;i < len;i ++){
+					if(arr[i].top > maxHeight){
+						maxHeight = arr[i].top;
+					}
+				}
+				//设置大盒子的高
+				oBigBox.style.height = maxHeight + 'px';
+			}
+			
+		</script>
+	</head>
+
+	<body>
+         <div class="box">
+         	 <h3>京剧生</h3>
+         	 <p>戏曲术语，中国戏曲表演主要行当之一。泛指净、丑之外的男角色。生的名目最早见于宋元南戏，指剧中男主角，与元杂剧的正末相当。清以后又衍化为老生、小生、外、末4个支系。另有红生一行，主要扮演关羽，因勾红脸，故又称红生。</p>
+
+         </div>
+         
+
+		<div class="wrap" id="wrap">
+			<div>
+			    <a href="javascript:void(0)" title=""><img src="waterfall/1.jpg" alt="" title="" /></a>
+				<h3>分类</h3>
+				<p>生是戏曲表演行当的主要类型之一，除净、丑以外的男性角色称为生行.按其扮演的人物的年龄、身份、性格特征和表演特点，大致分为老生、小生、外、末、武生和娃娃生几类。</p>
+			</div>
+			<div>
+			     <a href="javascript:void(0)" title=""><img src="waterfall/2.jpg" alt="" title="" /></a>
+				<h3>小生</h3>
+				<p>小生扮演青年男性，分巾 生（扇子生）、冠生（官生）、 穷生、 雉尾生（翎子生）、 武小生等。外，泛指生的副角，不表现确定的性格特征，唯汉剧的外唱、念、做并重。末，沿袭南戏、北杂剧之名目，今多数剧种已并入老生行。 武生扮演擅长武艺的人物，分长靠武生和短打武生两类。娃娃生扮演儿童角色， 京剧中还有娃娃武生。小生的表演在不同的剧种中各具特色，但也有共同之处。</p>
+			</div>
+			<div
+			     <a href="javascript:void(0)" title=""><img src="waterfall/3.jpg" alt="" title="" /></a>
+				<h3>武小生</h3>
+				<p>武小生，年轻的小将。如 京剧《 八大锤》中的陆文龙、《 岳家庄》中的岳云，《 九龙山》中的杨再兴。</p>
+			</div>
+			<div>
+			    <a href="javascript:void(0)" title=""><img src="waterfall/4.jpg" alt="" title="" /></a>
+				<h3>武生</h3>
+				<p>武生，擅长武艺的人物，分长*武生和短打武生两类。长*武生扎大*、穿厚底靴，扮演大将。如京剧《 挑滑车》中的高宠、《 长坂坡》中的赵云等都属长*武生。短打武生常穿袍衣袍裤和薄底靴，以动作的轻捷矫健、跌打翻滚的勇猛炽烈见长。</p>
+				
+			</div>
+			<div
+			    <a href="javascript:void(0)" title=""><img src="waterfall/5.jpg" alt="" title="" /></a>
+				<h3>扇子生</h3>
+				<p>巾生，又称扇子生，因戴文生巾或持折扇而得名，多扮儒雅潇洒的青年书生，唱、念、做诸功并重。如昆曲《 柳荫记》中的 梁山伯。</p>
+			</div>
+			<div>
+
+	            <a href="javascript:void(0)" title=""><img src="waterfall/6.jpg" alt="" title="" /></a>	
+				<h3>冠生</h3>
+				<p>冠生，是 昆曲特有的行当，又分为大冠生、小冠生。大冠生实为戴髯口的小生，多扮风流的皇帝或狂放不羁的才子，如《 长生殿》中的唐明皇、《彩毫记·醉写》中的 李白等。</p>
+			</div>
+			<div>
+
+                <a href="javascript:void(0)" title=""><img src="waterfall/7.jpg" alt="" title="" /></a>
+             	<h3>穷生</h3>
+				<p>穷生，即扮演穷愁潦倒的落魄书生，如川剧《 彩楼记》中的 吕蒙正、昆曲《 绣襦记》中的 郑元和。</p>
+			</div>
+			<div>
+				<a href="javascript:void(0)" title=""><img src="waterfall/8.jpg" alt="" title="" /></a>
+				<h3>雉尾生</h3>
+				<p>雉尾生，又叫翎子生，因常在帽盔上插两根雉尾而得名，唱、念、做、打诸功并重。如《 群英会》中的 周瑜、《 连环记》中的 吕布。</p>
+			</div>
+			<div>
+
+                <a href="javascript:void(0)" title=""><img src="waterfall/9.jpg" alt="" title="" /></a>
+                <h3>老生</h3> 
+				<p>老生，扮演中年以上、性格正直刚毅的正面人物。因戴髯口，又称须生，俗称胡子生。一般重唱功，用真声，念韵白；动作造型庄重、端方。比如说京剧《空城计》中的诸葛亮、梆子《蝴蝶杯》中的田云山等。</p>
+			</div>
+			<div>
+
+				<a href="javascript:void(0)" title=""><img src="waterfall/10.jpg" alt="" title="" /></a>				
+                <h3>典型人物</h3>
+				<p>《2007年3月10日，中国国家邮政局发行的2007－5《京剧生角》邮票一套6枚，票图分别为代表老生的“蔺相如”、“宋士杰”，代表小生的“周瑜”、“许仙”，代表武生的“高宠”、“任堂惠”。而在中国内地及台、港、澳发行的邮票中，曾多次出现过京剧生角的图案。</p>
+			</div>
+			<div>
+
+				<a href="javascript:void(0)" title=""><img src="waterfall/11.jpg" alt="" title="" /></a>				
+                <h3>武生高宠</h3>
+				<p>高宠，南宋抗金将领， 岳家军头号猛将，宋初开平王 高怀德之后。被称为南宋抗金 时期的第一枪，其枪法来自家传，先祖为 五代十国第一名枪 高思继。多剧种有名段《挑滑车》反映其事迹。</p>
+			</div>
+			<div>
+
+                <a href="javascript:void(0)" title=""><img src="waterfall/12.jpg" alt="" title="" /></a>
+                <h3>小生许仙</h3>
+				<p>许仙，字汉文，在是中国古代民间传说《白蛇传》或《白娘子传奇》中的男主人公。</p>
+			</div>
+			<div>
+
+                <a href="javascript:void(0)" title=""><img src="waterfall/13.jpg" alt="" title="" /></a>
+				<h3>雉尾生周瑜</h3>
+				<p>东汉末年东吴名将，相貌英俊有“周郎”之称.周瑜精通军事，又善音律，江东向来有“曲有误，周郎顾”之语.公元208年，孙、刘联军在周瑜的指挥下，于赤壁以火攻击败曹操的军队，此战也奠定了三分天下的基础.公元210年，周瑜因病去世，年仅36岁.</p>
+			</div>
+			<div>
+                <a href="javascript:void(0)" title=""><img src="waterfall/14.jpg" alt="" title="" /></a>
+				<h3>老生蔺相如</h3>
+				<p>蔺相如，战国时赵国上卿。曾为赵国宦官头目缪贤的家臣，战国时期著名的政治家、外交家。根据《史记·廉颇蔺相如列传》所载，他的生平最重要的事迹有完璧归赵、渑池之会与负荆请罪这三个事件。</p>
+			</div>
+			<div>
+				<a href="javascript:void(0)" title=""><img src="waterfall/15.jpg" alt="" title="" /></a>
+				<h3>武生任堂惠</h3>
+				<p>《杨家将》第三回：“任堂惠，家住云南昭通府昭通县城西五里任家庄，姓 任名炳字堂惠。父亲两年前故去了。家中有老母郝氏，娶妻白氏，家道小康，三口人过得很和睦。任炳从小爱练武术，学了点拳脚功夫，在附近八百里大小有点名声。</p>
+			</div>
+			<div>
+			    <a href="javascript:void(0)" title=""><img src="waterfall/16.jpg" alt="" title="" /></a>
+				<h3>生行简称“生”：</h3>
+				<p>生行分为须生（老生）、红生、小生、武生、娃娃生等。为京剧中的重要行当之一。须生（老生）：即中年以上的剧中人，口戴胡子（髯口），因性格与身份的不同，可分为安工老生或称唱工老生（如扮演帝王、官僚、文人等），靠把老生（如扮演武将），衰派老生（如扮演穷困潦倒之人等）.</p>
+			</div>
+			<div>
+
+                <a href="javascript:void(0)" title=""><img src="waterfall/7.jpg" alt="" title="" /></a>
+             	<h3>穷生</h3>
+				<p>穷生，即扮演穷愁潦倒的落魄书生，如川剧《 彩楼记》中的 吕蒙正、昆曲《 绣襦记》中的 郑元和。</p>
+			</div>
+			<div>
+				<a href="javascript:void(0)" title=""><img src="waterfall/8.jpg" alt="" title="" /></a>
+				<h3>雉尾生</h3>
+				<p>雉尾生，又叫翎子生，因常在帽盔上插两根雉尾而得名，唱、念、做、打诸功并重。如《 群英会》中的 周瑜、《 连环记》中的 吕布。</p>
+			</div>
+		</div>
+	</body>
+
+</html>

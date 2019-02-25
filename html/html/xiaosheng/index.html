@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="Keywords" content=""/>
+		<meta name="Description" content=""/>
+		<title></title>
+		<style>
+			*{margin:0;padding:0;font-family:"Microsoft yahei";}
+			.show{width:900px;height:360px;padding-top:50px;margin:0 auto;overflow: hidden;}
+			.pic1,.pic2,.pic3,.pic4{width:100px;height:360px;float:left;}
+			.pic1{background:url("img/1.jpg") no-repeat;background-size: 100% 100%;}
+			.pic2{background:url("img/2.jpg") no-repeat;no-repeat;background-size: 100% 100%}
+			.pic3{background:url("img/3.jpg");no-repeat;background-size: 100% 100%}
+			.pic4{background:url("img/4.jpg");width:600px;no-repeat;background-size: 100% 100%}
+			.txt{width:76px;height:360px;background:rgba(0,0,0,.5);color:#fff;line-height:16px;
+				padding:0 0 0 24px;}
+			.p1{width:16px;font-size:16px;float:left;}
+			.p2{width:12px;font-size:12px;font-weight:700;float:left;margin-left:15px;}
+		</style>
+	</head>
+	<body>
+	
+			<div class="show">
+				<div class="pic1 pic">
+					<div class="txt">
+						<p class="p1">基本简介<br>：读书人自称</p>
+						<p class="p2">小生的特点是不戴胡子，扮相一般都是比较清秀、英俊</p>
+					</div>
+				</div>
+				<div class="pic2 pic">
+					<div class="txt">
+						<p class="p1">主要分类<br>：文小生里又分为这么几类</p>
+						<p class="p2">袍带小生、扇子生、翎子生、穷生等。</p>
+					</div>
+				</div>
+				<div class="pic3 pic">
+					<div class="txt">
+						<p class="p1">相关风格<br>：袍带小生的风度</p>
+						<p class="p2">应该是雍容端庄还要带点儒雅稳重</p>
+					</div>
+				</div>
+				<div class="pic4 pic">
+					<div class="txt">
+						<p class="p1">京剧早期小生<br>：德珺如</p>
+						<p class="p2">他的嗓音宽亮高亢，浑厚刚劲</p>
+					</div>
+				</div>
+			</div>
+	
+		<script src="js/jquery.js"></script>
+		<script>
+			$(".pic").hover(function(){
+				$(this).stop(true).animate({width:"600px"},500).siblings().stop(true).animate({width:"100px"},500);
+			});
+		</script>
+	</body>
+</html>

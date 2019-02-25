@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>主页</title>
+<link rel="shortcut icon" href="img/banner.png">
+<link type="text/css" rel="stylesheet" href="css/tz.css">
+<link type="text/css" rel="stylesheet" href="css/case.css">
+<link type="text/css" rel="stylesheet" href="css/public.css">
+<link type="text/css" rel="stylesheet" href="css/nav.css">
+</head>
+<body>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/three.min.js"></script>
+<script src="js/tween.min.js"></script>
+<script src="js/TrackballControls.js"></script>
+<script src="js/CSS3DRenderer.js"></script>
+<script src="js/index.js"></script>
+<script src="js/nav.js"></script>
+<!--<img class="bannerImg" src="../images/banner.png">-->
+<div id="hint">
+    单击字块有详细介绍哦!
+</div>
+<div id="interHelp">
+    <div class="btnHelp">
+        <i class="triangle"></i>
+    </div>
+    <div class="contentHelp">
+
+        <p>■.本界面为网站主要介绍界面,<s>网站主页</s>为<a href="../index.html">单击此处</a>&nbsp;<s>网站前页</s>为<a href="../index1.html">单击此处</a></p>
+        <p>■.<a href="../register.html">注册请单击这里</a></p>
+        <p>■.<a href="../login.html">重新登录请单击这里</a></p>
+        <p>■.本界面<s>顶部右边</s>导航条其中主题内容滑过单击出现本网站主要介绍内容</p>
+        <p>■.本界面<s>底部左边</s>按钮单击可以切换界面中脸谱的排列形状</p>
+        <p>■.本界面<s>左键</s>可以<s>旋转</s>整个脸谱方阵,<s>右键</s>可以<s>移动</s>脸谱方阵</p>
+        <p>■.本网站可以进行简单购买脸谱周边</p>
+        <p>■.&nbsp;&nbsp;本网站使用JS/JQ/HTML/CSS完成,后台搭建使用PHP语言和MySQL数据库</p>
+    </div>
+</div>
+<nav id="nav">
+	<div class="navC">
+        <div class="nav index"><a href="../index.html">网站首页</a></div>
+		<div class="nav shopIndex"><a href="../shop.php">商店首页</a></div>
+        <div class="nav message"><a href="../message.html">交流区</a></div>
+        <div class="nav help" id="help">
+            <a href="#" class="helpA">服务指南</a>
+            <div class='lp-nav' id="navHelp">
+                <div class='lp-nav-content'>
+                    <ul>
+                        <li><a href="../index1.html">网站前页</a><b>|</b></li>
+                        <li><a href="../href.html">京剧网站</a><b>|</b></li>
+
+                        <li><a href="../cart.html">购物车</a></li>
+                        <li><a href="../about.html">关于我们</a><b>|</b></li>
+                        <li><a href="../contact.html">联系我们</a><b>|</b></li>
+                        <li><a href="../feedback.html">反馈</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+		<div class="nav theme" id="theme">
+            <a href="javascript:void(0)" id="allNav" class="a-nav">主题内容</a>
+				<div id='allTheme' class='lp-nav clear'>
+                    <div class='lp-nav-content l'>
+                        <h3>脸谱角色</h3>
+                        <h3>脸谱分类</h3>
+                        <h3>脸谱颜色</h3>
+                        <h3>脸谱知识</h3>
+                    </div>
+				</div>
+                <div id="con">
+                    <ol class="themeUl ol1">
+                        <li class="a"><a>生</a></li>
+                        <li class="a"><a>旦</a></li>
+                        <li class="a"><a>净</a></li>
+                        <li class="a"><a>丑</a></li>
+                    </ol>
+                    <ol class="themeUl ol2">
+                        <li class="a"><a>揉脸</a></li>
+                        <li class="a"><a>勾脸</a></li>
+                        <li class="a"><a>抹脸</a></li>
+                        <li class="a"><a>破脸</a></li>
+                        <li class="a"><a>整脸</a></li>
+                        <li class="a"><a>三瓦脸</a></li>
+                        <li class="a"><a>花三瓦脸</a></li>
+                        <li class="a"><a>碎脸</a></li>
+                    </ol>
+                    <ol class="themeUl ol3">
+                        <li class="a"><a>红色</a></li>
+                        <li class="a"><a>黑色</a></li>
+                        <li class="a"><a>白色</a></li>
+                        <li class="a"><a>黄色</a></li>
+                        <li class="a"><a>蓝色</a></li>
+                        <li class="a"><a>紫色</a></li>
+                        <li class="a"><a>金色</a></li>
+                        <li class="a"><a>银色</a></li>
+                        <li class="a"><a>绿色</a></li>
+                    </ol>
+
+                    <ol class="themeUl ol4">
+                        <li class="a"><a>起源</a></li>
+                        <li class="a"><a>特点</a></li>
+                        <li class="a"><a>作用</a></li>
+                    </ol>
+            </div>
+            <div class="con2">
+                <div id='allCon' class="allCon first">
+                    <div class="text text1">
+                        <div class="textTxt l">生是戏曲表演行当的主要类型之一，除净、丑以外的男性角色称为生行。生除了红生某些勾脸的武生之外其他都是素脸,也就是内行说的“俊扮”， 生行分为须生(老生、胡子生)、红生、小生、武生、娃娃生等。为京剧中的重要行当之一。
+                        </div>
+                        <div class="textImg r">
+                            <img src="html/sheng/index.png" alt="">
+                        </div>
+                    </div>
+                    <div class="text text2">
+                        <div class="textTxt l">旦角是指戏曲中的女性形象，可分为青衣、花旦、刀马旦、武旦、老旦、花衫等类别。其中京剧旦角著名的四大流派为梅派、程派、荀派、尚派。</div>
+                        <div class="textImg r">
+                            <img src="html/dan/index.png" alt="">
+                        </div>
+                    </div>
+                    <div class="text text3">
+                        <div class="textTxt l">简称'净',亦叫花脸。净角指脸画彩图的花脸角色，看来并不干净，故反其意为“净”。净行分如下几种角色：以唱为主的铜锤花脸与黑头花脸；以工架为主的架子花脸，如大将、和尚、绿林好汉及武花脸与摔打花脸等。铜锤花脸称正净，架子花脸叫副净、武工花脸名武净，武二花脸言红净，在表演风格上均有不同的特色。如包拯就是“净”角色。</div>
+                        <div class="textImg r">
+                            <img src="html/sheng/index.png" alt="">
+                        </div>
+                    </div>
+                    <div class="text text4">
+                        <div class="textTxt l">剧中丑行勾脸，而勾画“三花脸”，面谱与花脸有很大区别。
+                            丑行又分文丑、武丑。文丑中又分为方巾丑(文人，儒生)；武丑，专演跌、打、翻、扑等武技角色。根据动物属相，丑属牛，牛性笨，丑为笨的代名词。但舞台上的武丑亦叫开口跳，而能说能跳，表演出活泼伶俐，善演武功武技的角色，此与牛的丑笨性又截然不同.</div>
+                        <div class="textImg r">
+                            <img src="html/sheng/index.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div id="allCon1" class="allCon second">
+                        <div class="text text1">
+                            <div class="textTxt l">
+                                凝重威武，整色为主，加重五官纹理加以实现。是十分古老的脸谱形式。
+                            </div>
+                            <div class="textImg r">
+                                <img src="html/roulian/index.png" alt="揉脸">
+                            </div>
+                        </div>
+                        <div class="text text2">
+                            <div class="textTxt l">
+                                浅色为多，以为涂粉于面，不以真面目示人，突出奸诈坏人之性。
+                            </div>
+                            <div class="textImg r">
+                                <img src="html/molian/index.png" alt="抹脸">
+                            </div>
+                        </div>
+                        <div class="text text3">
+                            <div class="textTxt l">
+                                不对称脸，左右不一，形容面貌丑陋或意比反面角色.
+                            </div>
+                            <div class="textImg r">
+                                <img src="html/polian/index.png" alt="破脸">
+                            </div>
+                        </div>
+                        <div class="text text4">
+                            <div class="textTxt l">
+                                色彩绚丽，图案丰富，复杂美丽，五彩缤纷，有的还贴金敷银，华丽无比。
+                            </div>
+                            <div class="textImg r">
+                                <img src="html/goulian/index.png" alt="勾脸">
+                            </div>
+                        </div>
+                        <div class="text text5">
+                            <div class="textTxt l">
+                                最原始的脸谱形式，利用双眉把脸分为额和面两个部分的脸谱。
+                            </div>
+                            <div class="textImg r">
+                                <img src="html/zhenglian/index.png" alt="">
+                            </div>
+                        </div>
+                        <div class="text text6">
+                            <div class="textTxt l">
+                                在整脸的基础上再利用口鼻把面部分为左右的脸谱。
+                            </div>
+                            <div class="textImg r">
+                                <img src="html/suilian/index.png" alt="">
+                            </div>
+                        </div>
+                        <div class="text text7">
+                            <div class="textTxt l">
+                                在整脸的基础上再利用口鼻把面部分为左右的脸谱。
+                            </div>
+                            <div class="textImg r">
+                                <img src="html/zhengdan/index.png" alt="">
+                            </div>
+                        </div>
+                        <div class="text text8">
+                            <div class="textTxt l">
+                                把三块瓦脸的分界边缘艺术化，加上各式图案的脸谱.
+                            </div>
+                            <div class="textImg r">
+                                <img src="html/huasan/index.png" alt="">
+                            </div>
+
+
+                        </div>
+                </div>
+                <div id="allCon2" class="allCon third">
+                    <div class="text text1">
+                        <div class="textTxt l">
+                            象征忠义、耿直、有血性 <br> 其他：有讽刺意义，表示假好人。
+                        </div>
+                        <div class="textImg r">
+                            <img src="html/honglian/index.png" alt="">
+                        </div>
+                    </div>
+                    <div class="text text2">
+                        <div class="textTxt l">
+                            表现正直，无私，刚直不阿的人物形象<br>表示阴阳中的阴，用于鬼魂
+                        </div>
+                        <div class="textImg r">
+                            <img src="html/heilian/index.png" alt="">
+                        </div>
+                    </div>
+                    <div class="text text3">
+                        <div class="textTxt l">
+                            表现奸诈多疑，含贬义 <br>其他：和尙，太监脸谱
+                        </div>
+                        <div class="textImg r">
+                            <img src="html/bailian/index.png" alt="">
+                        </div>
+                    </div>
+                    <div class="text text4">
+                        <div class="textTxt l">
+                            勇猛、暴躁。
+                        </div>
+                        <div class="textImg r">
+                            <img src="html/guansheng/index.png" alt="">
+                        </div>
+                    </div>
+                    <div class="text text5">
+                        <div class="textTxt l">
+                            表现刚强，骁勇，有心计的人物性格。
+                        </div>
+                        <div class="textImg r">
+                            <img src="html/lanlian/index.png" alt="">
+                        </div>
+                    </div>
+                    <div class="text text6">
+                        <div class="textTxt l">
+                            表现刚正，稳练，沉着的人物<br>其他：面色不好，丑陋。。
+                        </div>
+                        <div class="textImg r">
+                            <img src="html/nvwudan/index.png" alt="">
+                        </div>
+                    </div>
+                    <div class="text text7">
+                        <div class="textTxt l">
+                            象征威武庄严，表现神仙一类角色 <br>其他：猛将。
+                        </div>
+                        <div class="textImg r">
+                            <img src="html/jinlian/index.png" alt="">
+                        </div>
+                    </div>
+                    <div class="text text8">
+                        <div class="textTxt l">
+                            表现奸诈多疑或威武庄严 <br>表现鬼怪或神仙一类角色
+                        </div>
+                        <div class="textImg r">
+                            <img src="html/sheng/index.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="text text9">
+                        <div class="textTxt l">
+                            代表顽强，暴躁的人物形象 <br>其他：绿林好汉.
+                        </div>
+                        <div class="textImg r">
+                            <img src="html/jing/index.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div id="allCon3" class="allCon fouth">
+                    <div class="text text1">
+                        <div class="textTxt l">
+                            京剧脸谱起源于生活。
+                            每个人面部器官的形状、轮廓相似，生理布局也都有一定的规律，面部肌肉的纹理与人物的年龄、生理、经历、生活的自然条件也都有密切关系，所以京剧脸谱的勾绘是以生活为依据，也是生活的概括。
+                        </div>
+                        <div class="textImg r">
+                            <img src="../images/1%20(540).jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="text text2">
+                        <div class="textTxt l">
+                            美与丑的矛盾统一 <br>
+                            与角色的性格关系的密切 <br>
+                            其图案是程式化的 <br>
+                        </div>
+                        <div class="textImg r">
+                            <img src="../images/1%20(557).jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="text text2">
+                        <div class="textTxt l">
+                            通过脸谱的造型和颜色、图案，开宗明义地告诉欣赏者这个人物的性格特征和道德伦理特征。
+                            <br>这样的划分使得舞台上的人物形象清楚明白，欣赏者不用再费心猜测、推理、判断。
+                        </div>
+                        <div class="textImg r">
+                            <img src="../images/1%20(540).jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="user" class="nav user">
+            <a id='auser' class='user l' href='../Backstage/user.html'></a>
+            <div class='lp-nav'>
+                <div class='lp-nav-content'>
+                    <ul>
+                        <li><a href="../Backstage/user.html">我的后台</a><b>|</b></li>
+                        <li><a href="../message.html">我要留言</a><b>|</b></li>
+                        <li><a href="../login.html">登录</a><b>|</b></li>
+                        <li><a href="../register.html">注册</a><b>|</b></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</div>
+</nav>
+<table id="pager">
+	<tr>
+		<td valign="top">
+			<div id="container">
+                <div class="reminder">
+                    单击切换脸谱排列 →
+                </div>
+				<div id="menu" class="magictime puffIn">
+					<button id="table">表格</button>
+					<button id="sphere">球体</button>
+					<button id="helix">环形</button>
+					<button id="grid">排列</button>
+					<button id="change">翻面</button>
+				</div>
+                <div class="hint">
+                    <div class="hint1">
+                        <span>将脸谱排列成 <br>表格布局</span>
+                    </div>
+                    <div class="hint2">
+                        <span>将脸谱排列成 <br>球型布局</span>
+                    </div>
+                    <div class="hint2">
+                        <span>将脸谱排列成 <br>环形布局</span>
+                    </div>
+                    <div class="hint2">
+                        <span>将脸谱排列成 <br>列式布局</span>
+                    </div>
+                    <div class="hint2">
+                        <span>将脸谱转换成 <br>字块样式</span>
+                    </div>
+                </div>
+			</div>
+		</td>
+		<td valign="top">
+			<div id="frame">
+				<iframe id="iframe" frameborder="0"></iframe>
+				<div id="menu" class="magictime puffIn">
+					<button id="back">Back</button>
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>
+<div id="detail" class="magictime puffIn" style="display:none">
+	<div class="head">
+		<h1></h1>
+	</div>
+	<div class="body">
+		<table>
+			<tr>
+				<td width="60%" valign="top">
+					<span class="img"></span>	
+				</td>
+				<td width="40%" valign="middle">
+                    <h1 ></h1>
+				</td>	
+			</tr>	
+		</table>
+	</div>
+</div>
+
+
+
+<div id="" class="xss">©Xss</div>
+</body>
+
+<script type="text/javascript" src='../js/lp.js'></script>
+<script src="../js/myApi.js"></script>
+<script>
+
+
+var table = [
+	
+	"1", "", "", 1, 2,{root:'html/sheng/',title:'老生',desc:'老生又称须生，正生，或胡子生。胡子在戏曲里的专有名词叫"髯口"。老生主要扮演 中年以上的男性角色，唱和念白都用本嗓（真嗓）老生基本上都是戴三绺的黑胡子，术语称"黑三"。'},
+	"2", "", "", 2, 2,{root:'html/xuanzhuan/',title:'旋转',desc:'旋转'},
+	"3", "", "", 3, 2,{root:'html/honglian/',title:'红色脸',desc:'关羽,赵匡胤'},
+	"4", "", "", 4, 2,{root:'html/lanlian/',title:'蓝色脸', desc:'马武,单雄信'},
+	"50", "", "", 5, 2,{root:'html/onmouseover/',title:'滑动', desc:'软'},
+	"51", "", "", 6, 2,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"52", "", "", 7, 2,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"53", "", "", 8, 2,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"5", "", "", 9, 2,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"6", "", "", 10, 2,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"7", "", "", 11, 2,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"8", "", "", 12, 2,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"9", "", "", 13, 2,{root:'html/ruan/',title:'滑动', desc:'软'},
+
+	"11", "", "", 1, 3,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"12", "", "", 2, 3,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"67", "", "", 3, 3,{root:'',title:'', desc:'软'},
+	"68", "", "", 4, 3,{root:'',title:'', desc:'软'},
+	"69", "", "", 5, 3,{root:'',title:'', desc:'软'},
+	"70", "", "", 6, 3,{root:'',title:'', desc:'软'},
+	"71", "", "", 7, 3,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"72", "", "", 8, 3,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"73", "", "", 9, 3,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"74", "", "", 10, 3,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"30", "", "", 11, 3,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"75", "", "", 12, 3,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"76", "", "", 13, 3,{root:'',title:'', desc:'软'},
+
+	"18", "", "", 1, 4,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"19", "", "", 2, 4,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"20", "", "", 3, 4,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"21", "", "", 4, 4,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"22", "", "", 5, 4,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"23", "", "", 6, 4,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"24", "", "", 7, 4,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"25", "", "", 8, 4,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"26", "", "", 9, 4,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"28", "", "", 10, 4,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"29", "", "", 11, 4,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"47", "", "", 12, 4,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"48", "", "", 13, 4,{root:'html/ruan/',title:'滑动', desc:'软'},
+
+	"37", "", "", 1, 5,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"38", "", "", 2, 5,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"39", "", "", 3, 5,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"40", "", "", 4, 5,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"41", "", "", 5, 5,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"42", "", "", 6, 5,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"43", "", "", 7, 5,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"44", "", "", 8, 5,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"45", "", "", 9, 5,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"46", "", "", 10, 5,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"49", "", "", 11, 5,{root:'html/ruan/',title:'滑动', desc:'软'},
+	"64", "", "", 12, 5,{root:'',title:'', desc:'软'},
+	"65", "", "", 13, 5,{root:'',title:'', desc:'软'},
+
+
+];
+
+var table1 = [
+	"生", "", "", 1, 2,{root:'html/sheng/',title:'生',desc:'生是戏曲表演行当的主要类型之一，除净、丑以外的男性角色称为生行。生除了红生某些勾脸的武生之外,其他都是素脸,也就是内行说的“俊扮”。'},
+	"老生", "", "", 2, 2,{root:'html/laosheng/',title:'老生',desc:'老生又称须生，正生，或胡子生。胡子在戏曲里的专有名词叫"髯口"。老生主要扮演 中年以上的男性角色，唱和念白都用本嗓（真嗓）老生基本上都是戴三绺的黑胡子，术语称"黑三"。'},
+	"小生", "", "", 3, 2,{root:'html/xiaosheng/',title:'小生',desc:'小生扮演青年男性，分巾生（扇子生）、冠生（官生）、穷生、雉尾生（翎子生）、武小生等。外，泛指生的副角，不表现确定的性格特征，唯汉剧的外唱、念、做并重'},
+	"武生", "", "", 4, 2,{root:'html/wusheng/',title:'武生', desc:'武生，擅长武艺的人物，分长打武生和短打武生两类。长打武生扎大刀、穿厚底靴，扮演大将。如京剧《长坂坡》中的赵云等.短打武生常穿袍衣袍裤和薄底靴，以动作的轻捷矫健、跌打翻滚的勇猛炽烈见长.如《闹天宫》中的孙悟空'},
+	"巾生", "", "", 5, 2,{root:'html/jinsheng/',title:'扇子生', desc:'巾生，又称扇子生，因戴文生巾或持折扇而得名，多扮儒雅潇洒的青年书生，唱、念、做诸功并重。如昆曲《柳荫记》中的梁山伯。'},
+	"冠生", "", "", 6, 2,{root:'html/guansheng/',title:'冠生', desc:'冠生，是昆曲特有的行当，又分为大冠生、小冠生。大冠生实为戴髯口的小生，多扮风流的皇帝或狂放不羁的才子，如《彩毫记·醉写》中的李白。小冠生又称纱帽小生，多扮春风得意的年轻新贵，如《荆钗记》中的王十朋'},
+	"穷生", "", "", 7, 2,{root:'html/qiongsheng/',title:'穷生', desc:'穷生，即扮演穷愁潦倒的落魄书生，如川剧《彩楼记》中的吕蒙正、昆曲《绣襦记》中的郑元和。'},
+	"雉尾", "", "", 8, 2,{root:'html/zhiweisheng/',title:'雉尾生', desc:'雉尾生，又叫翎子生，因常在帽盔上插两根雉尾而得名，唱、念、做、打诸功并重。如《群英会》中的周瑜、《连环记》中的吕布。'},
+	"", "", "", 9, 2,{root:'html/add/',title:'请单击其他字块', desc:'待添加'},
+	"", "", "", 10, 2,{root:'html/add/',title:'请单击其他字块', desc:'待添加'},
+    "分类", "", "", 11, 2,{root:'html/fenlei/',title:'脸谱的分类', desc:'脸谱根据描绘着色方式，分为：揉，勾，抹，破四种基本类型。'},
+	"变脸", "", "", 12, 2,{root:'html/onmouseover/',title:'变脸', desc:'变脸'},
+	"画法", "", "", 13, 2,{root:'html/huafa/',title:'脸谱的色画', desc:'京剧脸谱的色画方法，基本上分为三类：揉脸、抹脸、勾脸。'},
+
+	"旦", "", "", 1, 3,{root:'html/dan/',title:'旦', desc:'旦角是指戏曲中的女性形象，可分为青衣、花旦、刀马旦、武旦、老旦、花衫等类别。其中京剧旦角著名的四大流派为梅派、程派、荀派、尚派。'},
+	"正旦", "", "", 2, 3,{root:'html/zhengdan/',title:'正旦', desc:'正旦俗称“青衣”，因所扮演的角色常穿青色褶子而得名。主要扮演庄重的青年、中年妇女，表演特点是以唱功为主，动作幅度较小.行动比较稳重。念韵白，唱功繁重。如《三击掌》中的王宝钏等。'},
+	"花旦", "", "", 3, 3,{root:'html/huadan/',title:'花旦', desc:'花旦大多扮演青年女性。身着短衣裳，如褂子、裤子、裙子、袄,有时穿长衣裳，也绣着色彩艳丽的花样。人物性格大都活泼开朗，动作敏捷伶俐。表演以做功、说白为主，说白主要是京白，韵白较少。'},
+	"刀马", "", "", 4, 3,{root:'html/daomadan/',title:'刀马旦', desc:'刀马旦大都扮演擅长武艺的青壮年妇女，武打不如武旦激烈，不用“打出手”（即抛、掷、踢、接、武器的特技表演），较重唱、做和舞蹈。如《战金山》中的梁红玉、《穆柯寨》中的穆桂英等。'},
+	"武旦", "", "", 5, 3,{root:'html/nvwudan/',title:'武旦', desc:'武旦扮演擅长武打、勇武的女性。表演上着重武打，特别是使用特技“打出手”。武旦穿短衣裳，重在武功，不重唱念。如《打焦赞》中的杨排风、《武松打店》中的孙二娘等。'},
+	"花衫", "", "", 6, 3,{root:'html/huashan/',title:'花衫', desc:'花衫是本世纪20年代以后，综合青衣、花旦、刀马旦的艺术特点，发展而成的新的旦角类型。如《霸王别姬》中的虞姬、《汉明妃》中的王昭君、《锁麟囊》中的薛湘灵、《红楼二尤》中的尤三姐等。'},
+	"老旦", "", "", 7, 3,{root:'html/nvlaodan/',title:'老旦', desc:'老旦专门扮演老年妇女角色的行当。扮相、身段、台步都与青衣不同，主要突出老年人的特点。演唱用本噪，唱腔与老生接近，但具有女性婉转迂回的韵味。如《杨门女将》中的佘太君、《岳母刺字》中的岳母等。'},
+    "起源", "", "", 8, 3,{root:'html/qiyuan/',title:'京剧起源', desc:'京剧脸谱起源于生活。' +
+            '每个人面部器官的形状、轮廓相似，生理布局也都有一定的规律，' +
+            '面部肌肉的纹理与人物的年龄、生理、经历、生活的自然条件也都有密切关系，' +
+            '所以京剧脸谱的勾绘是以生活为依据，也是生活的概括。'},
+    "脸谱", "", "", 9, 3,{root:'html/lianpu/',title:'脸谱集合', desc:'首页脸谱介绍'},
+    "欣赏", "", "", 10, 3,{root:'html/xinshang/',title:'图片欣赏', desc:'图片欣赏'},
+	"戏", "", "", 11, 3,{root:'html/ruanruan/',title:'戏园', desc:'戏曲介绍'},
+	"介绍", "", "", 12, 3,{root:'html/add/',title:'脸谱介绍', desc:'脸谱的介绍'},
+	"作用", "", "", 13, 3,{root:'html/zuoyong/',title:'脸谱的作用', desc:'通过脸谱的造型和颜色、图案，开宗明义地告诉欣赏者这个人物的性格特征和道德伦理特征。这样的划分使得舞台上的人物形象清楚明白，欣赏者不用再费心猜测、推理、判断。'},
+
+	"净", "", "", 1, 4,{root:'html/jing/',title:'净', desc:'也叫花脸，画脸谱，即勾脸，表现性格豪放或长得奇形怪状的男性，音色和表演风格较生行更加粗犷。他们中有勇猛无敌的好汉，有刚正不阿的忠臣，也有凶狠狡诈的奸佞。'},
+	"正净", "", "", 2, 4,{root:'html/zhengjing/',title:'正净', desc:'也称“大面”、“铜锤”或“黑头”，所表现的人物多为举止稳重者，以唱功见长，如《铡美案》中的包拯，《二进宫》中的徐延昭等'},
+	"副净", "", "", 3, 4,{root:'html/fujing/',title:'副净', desc:'也称“二面”或“架子花”，多表现性格豪爽者，如张飞、李逵等，或奸邪佞幸者，如曹操、赵高等。'},
+	"武净", "", "", 4, 4,{root:'html/wujing/',title:'武净', desc:'也称“武花脸”，多表现身具武艺者，以武打翻跌见长，如《挑华车》中的黑风利等。'},
+	"毛净", "", "", 5, 4,{root:'html/maojing/',title:'毛净', desc:'指戏曲舞台上钟馗、周仓、巨灵神等类人物，他们或为天神，或为身体畸形者，造型夸张，多需垫肩、凸臀，在表演上以工架见长。'},
+	"", "", "", 6, 4,{root:'html/add/',title:'请单击其他字块', desc:'待添加'},
+	"红脸", "", "", 7, 4,{root:'html/honglian/',title:'红色脸', desc:'象征忠义、耿直、有血性'},
+	"蓝脸", "", "", 8, 4,{root:'html/lanlian/',title:'蓝色脸', desc:'表现刚强，骁勇，有心计的人物性格'},
+	"黑脸", "", "", 9, 4,{root:'html/heilian/',title:'黑色脸', desc:'表现正直，无私，刚直不阿的人物形象'},
+	"白脸", "", "", 10, 4,{root:'html/bailian/',title:'白色脸', desc:'表现奸诈多疑，含贬义'},
+	"金脸", "", "", 11, 4,{root:'html/jinlian/',title:'金色脸', desc:'象征威武庄严，表现神仙一类角色 '},
+	"银脸", "", "", 12, 4,{root:'html/yinlian/',title:'银色脸', desc:'表现奸诈多疑或威武庄严'},
+	"", "", "", 13, 4,{root:'html/add/',title:'请单击其他字块', desc:'待添加'},
+
+	"丑", "", "", 1, 5,{root:'html/chou/',title:'丑', desc:'指那些滑稽幽默或相貌丑陋的人物，有男性也有女性。男性多在鼻眼间勾画豆腐块状脸谱，故又称“小花脸”。有文丑、武丑、女丑之分。'},
+	"文丑", "", "", 2, 5,{root:'html/wenchou/',title:'文丑', desc:'指那些不具武艺的滑稽人物，脸谱勾豆腐块，又根据其身份、地位、年龄等区分为方巾丑、褶子丑、袍带丑、鞋皮丑、老丑等。'},
+	"武丑", "", "", 3, 5,{root:'html/wuchou/',title:'武丑', desc:'指那些身具武艺的滑稽人物，又称“开口跳”，表演上以跌扑翻打为其特色，亦重念白表演。'},
+	"女丑", "", "", 4, 5,{root:'html/nvchou/',title:'女丑', desc:'即丑婆子，饰演那些或滑稽或凶恶的老妇人，如媒婆、店婆、禁婆等，多表演夸张、语言风趣。'},
+    "", "", "", 5, 5,{root:'html/add/',title:'请单击其它字块', desc:'待添加'},
+    "碎脸", "", "", 6, 5,{root:'html/suilian/',title:'碎脸', desc:'三块瓦脸的变种，其分界边缘花形极大，破坏了原有的轮廓。'},
+	"花三", "", "", 7, 5,{root:'html/huasan/',title:'花三块瓦脸', desc:'把三块瓦脸的分界边缘艺术化，加上各式图案的脸谱.'},
+	"三瓦", "", "", 8, 5,{root:'html/sanwa/',title:'三块瓦脸', desc:'在整脸的基础上再利用口鼻把面部分为左右的脸谱。'},
+	"整脸", "", "", 9, 5,{root:'html/zhenglian/',title:'整脸', desc:'最原始的脸谱形式，利用双眉把脸分为额和面两个部分的脸谱。'},
+	"破脸", "", "", 10, 5,{root:'html/polian/',title:'破脸', desc:'不对称脸，左右不一，形容面貌丑陋或意比反面角色.'},
+	"抹脸", "", "", 11, 5,{root:'html/molian/',title:'抹脸', desc:'浅色为多，以为涂粉于面，不以真面目示人，突出奸诈坏人之性。'},
+	"勾脸", "", "", 12, 5,{root:'html/goulian/',title:'勾脸', desc:'色彩绚丽，图案丰富，复杂美丽，五彩缤纷，有的还贴金敷银，华丽无比。'},
+	"揉脸", "", "", 13, 5,{root:'html/roulian/',title:'揉脸', desc:'凝重威武，整色为主，加重五官纹理加以实现。是十分古老的脸谱形式。'},
+
+
+];
+
+
+
+
+
+window.onload=function(){
+
+	//主页图片或者文字显示
+	var xBox = document.querySelectorAll('.element');
+	var xImg = document.querySelector('.element .symbol');
+   	var xDiv = document.querySelector('.element .symbol1');
+
+	var button = document.getElementById( 'change' );
+	button.addEventListener( 'click', function ( event ) {
+		if(xBox[1].firstElementChild.style.display == 'block'){
+
+			for( var i = 0 ; i < xBox.length ; i ++){
+
+				xBox[i].firstElementChild.style.display = 'none';
+				xBox[i].lastElementChild.style.display = 'block';
+			}
+		}
+		else
+		{
+			for( var i = 0 ; i < xBox.length ; i ++){
+
+				xBox[i].firstElementChild.style.display = 'block';
+				xBox[i].lastElementChild.style.display = 'none';
+			}
+
+		}
+}, false );
+
+}
+cookieUser();
+
+$('#menu').find('button').on({
+    'click':function () {
+        console.log(1);
+        $(this).css('background','rgba(222,28,49,0.5)').siblings().css('background','rgba(130,17,31,0.75)')
+        return false;
+    }
+});
+
+
+</script>
+
+<script type="text/javascript" src="js/case.js"></script>
+</html>
